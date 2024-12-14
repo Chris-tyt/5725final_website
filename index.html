@@ -25,6 +25,17 @@
 					opacity: 1; /* Fully visible */
 				}
 			}
+
+			@keyframes blink {
+				50% {
+					border-color: transparent;
+				}
+			}
+
+			.typing-cursor {
+				border-right: 2px solid black;
+				animation: blink 0.7s step-end infinite;
+			}
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -79,7 +90,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Hi. You're looking at <strong>Magic Camera</strong>.</h2>
+						<h2>Hi. You're looking at <strong id="magic-camera-text">Magic Camera</strong>.</h2>
 						<!-- <p>
 							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
 							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
@@ -759,6 +770,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const textElement = document.getElementById('magic-camera-text');
+				const text = "Magic Camera";
+				let index = 0;
+
+				function typeWriter() {
+					if (index < text.length) {
+						textElement.innerHTML = text.substring(0, index + 1) + '<span class="typing-cursor"></span>';
+						index++;
+						setTimeout(typeWriter, 150); // Adjust typing speed here
+					} else {
+						textElement.innerHTML = text; // Remove cursor after typing
+					}
+				}
+
+				typeWriter();
+			});
+			</script>
 
 	</body>
 </html>
