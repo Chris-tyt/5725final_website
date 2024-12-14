@@ -11,6 +11,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.rounded-image {
+				border-radius: 15px; /* Adjust the radius as needed */
+				max-width: 100%;
+				height: auto;
+				opacity: 0; /* Start invisible */
+				animation: fadeIn 1s forwards; /* Fade-in effect */
+			}
+
+			@keyframes fadeIn {
+				to {
+					opacity: 1; /* Fully visible */
+				}
+			}
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -178,11 +193,7 @@
 						</div>
 						<hr />
 						<header>
-							<h2><a href="#">Project Obejctive</a></h2>
-							<!-- <p style="text-align: left;">
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-							</p> -->
+							<h2>Project Objective</h2>
 						</header>
 						<p>
 							This project aims to develop a fully functional real-time face and limb keypoint detection system based on Raspberry Pi. The system captures video streams through cameras, detects face and limb keypoints in real-time, and overlays dynamic visual effects. Users can directly select different modes through the initial menu interface on Raspberry Pi, or switch between six dynamic effect modes through gesture recognition.
@@ -203,16 +214,456 @@
 							<li><strong>Gesture recognition interaction:</strong> Users can switch modes through specific gestures to enhance the interactivity and smooth experience of the system.</li>
 							<li><strong>User-friendly initial menu design:</strong> After the system is turned on, it enters the initial interface, and users can select any mode through the buttons on the piTFT touch screen, and the operation is intuitive and convenient.</li>
 						</ol>
-						<p>
-							By combining real-time detection with dynamic effects, this system brings rich and personalized visual experiences and demonstrates the potential of embedded platforms in Computer Vision applications.
-						</p>
 						<hr />
+						
+						<!-- New Introduction Section -->
 						<header>
-							<h2>System Overview</h2>
+							<h2>Introduction</h2>
 						</header>
-						<!-- <footer>
-							<a href="#" class="button">Continue Reading</a>
-						</footer> -->
+						<p>
+							With the rapid development of Computer Vision technology, real-time face and body posture detection has gradually become possible. However, implementing this function on embedded platforms with limited computing resources (such as Raspberry Pi) is not easy. The goal of this project is to combine lightweight image processing technology to achieve efficient real-time detection and visual effect overlay.
+						</p>
+						<p>The main design features of the project include:</p>
+						<ul>
+							<li><strong>Real-time keypoint detection</strong>: The system can capture facial features and body posture, and track the dynamic changes of users in real time.</li>
+							<li><strong>Multi-mode dynamic special effects display</strong>: Provide six different visual effects modes to meet the diverse needs of users.</li>
+							<li><strong>Gesture interaction and mode switching</strong>: In addition to touch screen button control, users can freely switch modes through gestures, and the operation is more interesting.</li>
+							<li><strong>Resource optimization and performance tuning</strong>: Ensure smooth operation and low latency response on Raspberry Pi by utilizing frame interpolation and multi-core.</li>
+						</ul>
+						<p>
+							This project not only demonstrates the practical application of visual processing technology, but also achieves efficient and stable operation on low-power embedded devices such as Raspberry Pi through reasonable system design and optimization.
+						</p>
+						<!-- ... existing code ... -->
+
+						<!-- New Design and Testing Section -->
+						<header>
+							<h2>Design and Testing</h2>
+						</header>
+
+						<!-- Hardware Design Subsection -->
+						<header>
+							<h3 style="font-size: 1.75em;">Hardware design</h3>
+						</header>
+						<p>
+							The system hardware consists of the following core components:
+						</p>
+						<ol>
+							<li>
+								<strong>Raspberry Pi 4B</strong>: The core computing unit of the project, responsible for running keypoint detection algorithms, dynamic effect overlay and gesture recognition functions.
+							</li>
+							<li>
+								<strong>Camera Module</strong>: Captures the user's real-time video stream and transmits the image data to the Raspberry Pi for processing.
+							</li>
+							<li>
+								<strong>piTFT touch screen with physical buttons</strong>:
+								<ul>
+									<li>
+										<strong>Touch screen</strong>: Provide an initial menu interface, and users can intuitively select any dynamic effect mode through the touch screen.
+									</li>
+									<li>
+										<strong>Buttons</strong>: Each button corresponds to a dynamic effect mode, which is convenient for users to switch quickly.
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+						<!-- New Software Design Section -->
+						<header>
+							<h3 style="font-size: 1.75em;">Software Design</h3>
+						</header>
+						<p>
+							The software design of this project revolves around five functional modules: video stream processing, face and limb key point detection, dynamic visual effect overlay, gesture recognition, and user interaction, to ensure that the system achieves efficient and stable real-time visual processing and effect display on the Raspberry Pi platform.
+						</p>
+						<p>
+							After system start-up, the user first enters the initial menu interface, which displays six mode options through the piTFT touch screen, including adding glasses, adding hats, combining accessories (glasses + hats + cigarettes), sketch outline effect, cartoon effect, and skeleton effect. Users can select modes through the touch screen or switch modes through gesture recognition in any mode, which improves the flexibility and interactivity of the operation.
+						</p>
+						<p>
+							The video capture and image processing module uses PiCamera2 to capture real-time video streams and uses OpenCV for preprocessing, including resolution adjustment, image conversion, and frame rate control, to ensure the real-time and fluency of the system on the embedded platform. The keypoint detection module is based on the MediaPipe library, which detects facial and hand keypoints respectively, providing accurate coordinate basis for the subsequent dynamic effect overlay. The detection result is synchronized with the image data and transmitted to the dynamic effect overlay module, and the video stream is processed according to different modes.
+						</p>
+						<p>
+							The dynamic effects module dynamically overlays virtual accessories (such as glasses, hats, cigarettes) or visual filters (such as sketch contours, cartoon effects) into the video stream by recognizing facial and body key points. The effect adjusts in real time with the user's posture to ensure the naturalness and stability of the special effects. The implementation of the special effects combines technologies such as image rotation, scaling, transparency processing, and image mixing. The processed special effects image is superimposed on the original video frame through the <code>overlay_image</code> function. In addition, the skeleton mode also draws the human face and hand skeleton through MediaPipe to visually display the distribution and connection relationship of key points.
+						</p>
+						<p>
+							The gesture recognition module realizes real-time gesture detection and mode switching functions. The system recognizes user gesture actions (such as single-finger lifting, double-finger lifting, etc.) through MediaPipe hand keypoint detection and triggers mode switching logic. After detecting a specific gesture, the system will activate the countdown function to ensure the accuracy of gesture confirmation and automatically switch to the corresponding mode after the countdown ends.
+						</p>
+						<p>
+							Overall, the software design achieves a complete functional chain from video capture to special effects overlay and user interaction through precise module division of labor and reasonable data flow control. In the resource-constrained environment of Raspberry Pi, the system successfully meets the requirements of low latency, high stability, and smooth operation through lightweight model optimization and real-time performance tuning, providing good user experience and interaction effects.
+						</p>
+
+						<!-- New Interface Design Section -->
+						<header>
+							<h3 style="font-size: 1.75em;">Interface Design</h3>
+						</header>
+
+						<!-- Centered Image with Rounded Corners and Animation -->
+						<div style="display: flex; justify-content: center; margin: 20px 0;">
+							<img src="images/interface.jpeg" alt="Description of the image" class="rounded-image"/>
+						</div>
+
+						<!-- Background Design Subsection -->
+						<header>
+							<h4 style="font-size: 1.2em;">Background design</h4>
+						</header>
+						<p>
+							The entire interface is divided into two areas, with orange as the background on the top, representing the title area, and yellow as the background below, providing support for the button area. This partitioning method makes the interface structure clearer through color contrast, and the interface ratio of the upper and lower sections is roughly 4:3, making the content distribution more balanced. In the central area of the upper half, a large yellow circle and a small orange circle are also superimposed, highlighting the area where the title is located through the hierarchy of the two circles, which naturally focuses the user's attention on the core content of the interface.
+						</p>
+
+						<!-- Title Design Subsection -->
+						<header>
+							<h4 style="font-size: 1.2em;">Title design</h4>
+						</header>
+						<p>
+							The title "Magic" is located in the center of the upper half and adopts a two-layer font design. First, white text is placed in the center of the circle, forming a bright visual effect. Then, slightly offset black text is superimposed with white text, as if adding a layer of shadow to the title. This design not only improves the readability of the title but also increases the three-dimensional sense. At the same time, a circular arc effect is cleverly formed by the superposition of two circles, further highlighting the visual center. First, a larger yellow circle is drawn in the center of the background, naturally blending with the yellow background in the lower half, enhancing the integrity of the interface. Then, a smaller orange circle covers the yellow circle, and the yellow arc left at the edge prominently highlights the title area. This design not only guides users' attention to the title text but also relieves visual fatigue through soft circular and arc designs, adding a natural and comfortable atmosphere to the interface. At the same time, the arc shape adds a halo-like decoration to the title "Magic", closely matching the theme of "Magic", enhancing the aesthetics of the interface and making the theme style more distinctive.
+						</p>
+
+						<!-- Button Layout Subsection -->
+						<header>
+							<h4 style="font-size: 1.2em;">Button layout</h4>
+						</header>
+						<p>
+							The area of the button section is divided into a grid of two rows and three columns, and each button is placed in the center of a grid cell. The width of each cell is one-third of the total width of the screen, and the height is half of the height of the lower half of the screen. The button itself is slightly smaller than the cell, and a certain distance is reserved around it to make the interface look neater. The button image is scaled to fit the cell size while maintaining aesthetics. In addition, the image content of the button is rotated 90 degrees to ensure correct orientation, and the transparent channel of the image is specially processed to make the button blend perfectly into the background without edge issues.
+						</p>
+
+						<!-- Text and Options Subsection -->
+						<header>
+							<h4 style="font-size: 1.2em;">Text and options</h4>
+						</header>
+						<p>
+							Each button has a corresponding option text in the center, which is placed in the center of the button. To ensure centering, the position of the text is calculated based on the center position of each grid cell, and the center of each grid cell is its upper left corner position plus half of the cell width and height. The option text uses a soft beige color, forming an appropriate contrast with the yellow background, making the text clear and visible. The size of the text is coordinated with the proportion of the button, ensuring that users can quickly identify the button content.
+						</p>
+						<p>
+							Through these detailed designs, this interface not only has clear visual effects and reasonable layout, but also the proportion and position of each part have been accurately calculated, achieving a good combination of functionality and aesthetics.
+						</p>
+
+						<!-- Mode Design Section -->
+						<header>
+							<h3 style="font-size: 1.75em;">Mode Design</h3>
+						</header>
+
+						<!-- Mode 1: Add glasses -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 1: Add glasses</h4>
+						</header>
+						<p>
+							In Mode 1, the system detects the user's facial key points in real time and dynamically overlays virtual glasses images in the user's eye area to achieve a natural and following user posture change effect display. This mode relies on MediaPipe's Face Mesh model to extract the key coordinate points of the eyes (mainly the center positions of the left and right eyes), and adjust the size, angle, and position of the glasses according to the distance and angle between the two points.
+						</p>
+						<p>
+							To achieve glasses stacking, several key technical issues need to be addressed:
+						</p>
+						<ol>
+							<li><strong>Eye key point positioning</strong>: Extract the coordinate points of the left and right eyes through Face Mesh, and calculate the midpoint position of the two points. This midpoint will serve as the benchmark point for superimposing glasses.</li>
+							<li><strong>Dynamic scaling</strong>: Since the width of the glasses needs to match the user's actual eye distance, the system dynamically calculates the distance between the two eyes and adjusts the glasses image based on the scaling factor to ensure a natural and proportional overlay effect.</li>
+							<li><strong>Angle rotation</strong>: Considering that the user's face may tilt, the system will rotate the glasses image by calculating the tilt angle between the left and right eyes to fit the user's current head posture.</li>
+							<li><strong>Transparency processing and overlay</strong>: The glasses image is a PNG image with a transparent channel, and the system naturally overlays the glasses image into the user's face video stream by processing the transparency layer (Alpha channel), without blocking the background or other features of the user's face.</li>
+						</ol>
+						<p>
+							Finally, the overlay effect of the glasses will automatically adjust with the rotation, tilt, or slight displacement of the user's head, responding to user dynamics in real time to ensure the stability and naturalness of the visual effect. This mode not only demonstrates the system's high-precision processing ability in dynamic special effects overlay but also lays the foundation for more complex combination effects in the future.
+						</p>
+
+						<!-- Mode 2: Add a hat -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 2: Add a hat</h4>
+						</header>
+						<p>
+							Mode 2 achieves personalized dynamic special effects display by superimposing virtual hat images on the user's head area. Similar to Mode 1, this mode also relies on the Face Mesh model to obtain facial keypoint information, but there are differences in the selection and processing of keypoints: the system focuses on the keypoints of the forehead and head area, and uses them as a benchmark to locate and adjust the position, size, and angle of the hat.
+						</p>
+						<p>
+							The core steps of hat stacking include:
+						</p>
+						<ol>
+							<li><strong>Head key point positioning</strong>: The system extracts the key point coordinates of the top of the forehead, chin, and left and right cheeks through Face Mesh. These points are used to calculate the width and height of the head, and determine the center position of the head for subsequent superimposition of hat images.</li>
+							<li><strong>Dynamic scaling and adjustment</strong>: The hat image is dynamically scaled according to the width of the head, ensuring that the size of the hat matches the proportion of the user's head. By adding a certain offset, the hat will float slightly upward, avoiding overlapping with the user's facial area.</li>
+							<li><strong>Angle rotation processing</strong>: When the user's head tilts, the system adjusts the rotation direction of the hat according to the angle between the key points of the left and right cheeks, so that it is consistent with the head posture and enhances the visual realism.</li>
+							<li><strong>Overlay and transparency processing</strong>: The processed hat image will naturally blend with the video stream, and the transparent channel of the hat ensures that the image edge is smooth and will not affect the user's head contour or background content.</li>
+						</ol>
+						<p>
+							The design of Mode 2 fully considers the dynamic changes of the user's head posture. Whether it is a slight back and forth movement or a lateral tilt, the system can quickly respond and adjust the display effect of the hat, making it stably and naturally superimposed on the head area, presenting a smooth visual effect.
+						</p>
+
+						<!-- Mode 3: Combination accessories (glasses + hat + cigarettes) -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 3: Combination accessories (glasses + hat + cigarettes)</h4>
+						</header>
+						<p>
+							Mode 3 is an extension and combination of Mode 1 and Mode 2, and further adds the "cigarette" effect. In this mode, the system dynamically overlays glasses, hats, and cigarettes in the three areas of the user's face, including the eyes, head, and mouth, to display more complex visual effects.
+						</p>
+						<p>
+							The implementation of this mode relies on the Face Mesh model to obtain multiple facial keypoints. The system extracts and processes the coordinate information of the eyes, head, and mouth respectively to meet the following requirements:
+						</p>
+						<ol>
+							<li><strong>Glasses Overlay</strong>: Similar to Mode 1, the system will overlay virtual glasses in the eye area. The size, angle, and position of the glasses will dynamically adjust according to the left and right eye coordinates to ensure that they change synchronously with the user's facial posture.</li>
+							<li><strong>Hat Overlay</strong>: Same as Mode 2, the system locates the top of the head area and dynamically adjusts the position and rotation angle of the hat according to the width and tilt angle of the face. The hat image will automatically coordinate with the glasses effect when displayed to avoid visual conflicts.</li>
+							<li><strong>Cigarette Overlay</strong>: In the mouth area, the system locates the center point of the lips and the key points of the left and right corners of the mouth, and calculates the width and center position of the mouth. The cigarette image will be scaled and rotated according to this information to match the dynamic position of the user's mouth. At the same time, the system performs horizontal flipping processing on the cigarette image to ensure that its orientation is correct and the visual effect is natural.</li>
+						</ol>
+						<p>
+							Mode 3 combines and stacks multiple special effects, greatly increasing the complexity of the system. In order to ensure that each special effect does not interfere with each other during dynamic stacking, the system accurately partitions and calibrates the coordinate processing of key points in implementation to ensure that the relative positions of glasses, hats, and cigarettes remain consistent. In addition, the transparent processing of special effects images further enhances the fusion degree of the effects, making the group effects look more natural and coordinated.
+						</p>
+						<p>
+							In the end, the user experience in Mode 3 is three-dimensional and rich. The system can stably display three types of accessory effects while dynamically tracking the user's facial posture changes, bringing highly interesting visual effects. This mode fully demonstrates the system's processing ability for complex multi-target stacking, providing support for subsequent more advanced dynamic effect design.
+						</p>
+
+						<!-- Mode 4: Sketch Effect -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 4: Sketch Effect</h4>
+						</header>
+						<p>
+							In Mode 4, the system converts the video stream into a sketch-like artistic effect by extracting the edge contours of the user's face and hands in real time. The entire process combines canary release conversion, edge detection, and image smoothing processing to generate a clear and visually impactful sketch effect. This mode not only highlights the contour lines of the user's face and hands, but also removes the details and color information of the background, making the overall picture concise and artistic. The following are the implementation steps of the Sketch effect:
+						</p>
+						<ol>
+							<li><strong>Image conversion and preprocessing</strong>: In order to prepare for the subsequent contour extraction, the system first performs canary release conversion on the color video frames captured by the camera, and converts the original RGB image into a canary release image. The canary release image can remove color information, retain the brightness and structure of the picture, make the image data more concise, and help improve the efficiency and accuracy of edge detection.</li>
+							<li><strong>Next, the system uses median filtering</strong> to smooth the canary release image, reducing noise and fine textures in the image, while preserving the details of the edge area. The application of median filtering ensures the clarity of the sketch effect and avoids the interference of messy noise on the continuity of edge lines.</li>
+							<li><strong>Edge detection</strong>: The core of the Sketch effect is to accurately extract the edge contours in the image. The system combines Canny edge detection and Laplacian operator in this stage to achieve high-precision edge extraction and enhancement.
+								<ul>
+									<li><strong>Canny Edge Detection</strong>: By using the dual threshold method and non-maximum suppression, the significant edges in the image are accurately located, generating highlighted (white) edge lines and black backgrounds. The Canny algorithm can effectively filter noise while retaining the main structural information of the image.</li>
+									<li><strong>Laplacian operator</strong>: Based on Canny edge detection, it further enhances the contour details of the image, making the edge lines sharper and more coherent. The enhancement of Laplacian operator can capture the subtle contour changes of the face and hands, improving the expressiveness of the sketch effect.</li>
+								</ul>
+							</li>
+							<li>The final edge detection result is a contour image composed of black and white lines, highlighting the user's facial features, head contours, and main hand shapes.</li>
+							<li><strong>Contour Fusion and Background Processing</strong>: In order to make the sketch effect more natural and artistic, the system fuses the edge detection results with the original image smoothed by bilateral filtering.
+								<ul>
+									<li><strong>Bilateral filtering</strong>: apply bilateral filtering to the original color image, retain the main color blocks and the blurring effect of the image, remove excess details, and make the picture closer to the hand-drawn style of the sketch.</li>
+									<li><strong>Edge Overlay</strong>: Through transparency fusion, the extracted edge contour lines are overlaid onto the smoothed image. This step ensures a natural transition between the lines and the background, with the edge lines visually more prominent and the background appearing soft and concise.</li>
+								</ul>
+							</li>
+							<li><strong>Dynamic effects and real-time updates</strong>: The system adjusts the contour lines of the face and hands based on the user's dynamics. Regardless of how the user's face moves or rotates, the system can quickly capture changes and update the position and shape of the contour lines in real time, ensuring that the Sketch effect can stably and coherently display the user's dynamic posture.</li>
+						</ol>
+						<p>
+							In Mode 4, the user's video screen presents a classic sketch style. The sketch effect in this mode is artistic and expressive. Users can intuitively see their facial and hand structures presented in real-time sketch form. No matter how the user moves, rotates, or makes gestures, the system can respond in real-time and update the lines to ensure the smoothness and stability of the sketch effect.
+						</p>
+
+						<!-- Mode 5: Cartoonize Effect -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 5: Cartoonize Effect</h4>
+						</header>
+						<p>
+							In Mode 5, the system processes the user's real-time video stream into a visual effect with a cartoon style by performing multi-step image processing and stylization conversion on the video frame. This mode mainly combines technologies such as edge detection, color quantization, and smoothing processing. Through a series of image processing steps, the details and colors of the image are simplified and reshaped, presenting an artistic style similar to cartoon illustrations.
+						</p>
+						<p>
+							The implementation of cartoon effects mainly includes the following stages:
+						</p>
+						<ol>
+							<li><strong>Image smoothing processing</strong>: In order to make the image present a soft and concise visual effect in the cartoonization process, the system first uses bilateral filtering to smooth the original video frame. Bilateral filtering can smooth the color area inside the image while preserving the edge contour of the image, thereby reducing the complexity of noise and details, and providing clean input for subsequent color quantization and edge detection.</li>
+							<li><strong>Color quantization</strong>: Color quantization is to significantly reduce the number of colors in the image to achieve the effect of color blocking. In Mode 5, the system uses K-Means clustering (K-Means Clustering) to cluster the color histogram of the image, compressing the color space into fewer categories. The clustered color values replace the colors of the original pixels, making the image present a clear color block and distinct color effect, which is one of the key features of cartoon style.</li>
+							<li><strong>Edge Detection and Stroke</strong>: In order to highlight the main contours in the image, the system uses Canny edge detection combined with Laplacian operator to extract the edge information of the image. The Canny algorithm can accurately capture significant edges in the image, while the Laplacian operator further enhances the continuity and smoothness of the edges. The extracted edge image will be superimposed as a "stroke" layer on the image after smoothing and color quantization, simulating the black contour line effect in cartoon illustrations.</li>
+							<li><strong>Results integration and output</strong>: Finally, by transparently overlaying the edge information with the color quantized image, the system generates a cartoonized real-time image. The system performs meticulous fusion processing on the edges and color blocks to ensure that the image does not appear obvious fracture or distortion. In addition, further corrosion operations make the image contour lines more delicate and fit the style of the cartoon effect.</li>
+						</ol>
+						<p>
+							In Mode 5, the user's video will be presented in real-time with smooth cartoon effects, bright colors, and clear edges, making the overall picture look simple and artistic. No matter how the user moves or adjusts their posture, the system can continuously process the video stream to ensure the stability and real-time nature of the cartoon effect. This mode fully demonstrates the system's processing ability in image style conversion, providing users with a fun and artistic visual experience.
+						</p>
+
+						<!-- Mode 6: Skeleton Effect -->
+						<header>
+							<h4 style="font-size: 1.2em;">Mode 6: Skeleton Effect</h4>
+						</header>
+						<p>
+							In Mode 6, the system converts real-time video images into skeleton effects by detecting and drawing key points on the user's face and hand, visually displaying the user's facial contours and gesture skeleton structure. The implementation of this mode relies on MediaPipe's Face Mesh and Hands modules, which form a visual display effect with a network skeleton style by accurately extracting key point positions and dynamically drawing connection lines.
+						</p>
+						<p>
+							The implementation process of Skeleton effect includes the following steps:
+						</p>
+						<ol>
+							<li><strong>Key point detection</strong>: The system first uses MediaPipe's Face Mesh module to detect 468 key points on the face, covering areas such as the eyes, nose, mouth, cheeks, and forehead, accurately locating the structure of the user's face. In addition, the Hands module is used to detect 21 key points on the user's hands, covering major nodes such as finger joints and palms. The data of these key points provides basic coordinate information for the skeleton effect.</li>
+							<li><strong>Key point connection and drawing</strong>:
+								<ul>
+									<li><strong>Facial Skeleton Drawing</strong>: The system connects the facial key points detected by Face Mesh according to a predefined mesh structure, generating facial contour lines, facial features contour lines, and mesh-like detail lines. This process forms a clear facial skeleton mesh by connecting key points into line segments.</li>
+									<li><strong>Hand skeleton drawing</strong>: The system connects the key points of the hand detected by Hands to generate the skeleton structure of the palm and fingers. The center of the palm and the finger joints are connected in a straight line to fully display the skeleton shape of the gesture action.</li>
+								</ul>
+							</li>
+							<li>During the drawing process, the system uses different colors and line thicknesses to distinguish. For example, the facial contour line uses thinner lines, and the connecting lines of the hand joints use more eye-catching colors to enhance visual clarity and recognition.</li>
+							<li><strong>Real-time updates and rendering</strong>: The skeletal structure of the face and hands will be updated in real-time with the dynamic changes of the user. Regardless of how the user's face rotates or how their gestures change, the system can quickly respond and dynamically adjust the drawing position of the skeleton, ensuring that the skeletal structure is synchronized with the actual video stream. In addition, the system has performed performance optimization on the drawing of the skeleton, making the rendering process of the lines smooth and without delay.</li>
+							<li><strong>Visual presentation</strong>: The Skeleton effect presents the user's face and gesture structure in a skeletal form through concise grids and lines, providing a unique visual effect. This effect highlights the details of the user's dynamic posture to a certain extent, especially in gesture recognition and facial dynamic tracking. Users can clearly see the movement trajectory and key point distribution of their face and hands, thereby enhancing interaction with the system.</li>
+						</ol>
+						<p>
+							In Mode 6, the system demonstrates accurate keypoint tracking and efficient skeleton structure drawing capabilities, especially suitable for dynamic posture demonstration and gesture detection display. The skeleton effect is concise and intuitive, responding to user actions in real-time, adding professionalism and fun to the system's interactivity and technical performance.
+						</p>
+
+						<!-- Mode Switching Logic Section -->
+						<header>
+							<h3 style="font-size: 1.75em;">Mode Switching Logic</h3>
+						</header>
+						<p>
+							After detecting a gesture, the program will switch modes based on the current state and gesture. The switching logic includes the following important parts:
+						</p>
+						<ol>
+							<li><strong>Check if the new gesture matches the current mode</strong>:
+								<ul>
+									<li>The program first determines whether the current gesture matches the gesture required by the current mode.</li>
+									<li>If there is no match, the timer will be reset and the current mode switch will be cancelled.</li>
+								</ul>
+							</li>
+							<li><strong>Preparation for entering a new mode</strong>:
+								<ul>
+									<li>If a new valid gesture is detected and the countdown to switching is not currently in progress, the program will start a countdown (e.g. 3 seconds).</li>
+									<li>The program will record the start time of the countdown and prompt "Switch to Mode X" on the screen.</li>
+								</ul>
+							</li>
+							<li><strong>Detection during the countdown</strong>:
+								<ul>
+									<li>During the countdown process, the program continuously detects gestures. If the gesture changes during the countdown, the countdown will be reset and the new mode switch will be aborted.</li>
+								</ul>
+							</li>
+							<li><strong>Mode switch after countdown ends</strong>:
+								<ul>
+									<li>If the countdown ends and the gesture remains unchanged, the program will switch to the corresponding mode.</li>
+									<li>When switching, the program turns off all other modes and prints the name of the currently active mode.</li>
+								</ul>
+							</li>
+							<li><strong>Logic of special mode</strong>:
+								<ul>
+									<li>Each mode (such as Mode 1 to Mode 6) corresponds to a different visual effect or function. For example:</li>
+									<ul>
+										<li><strong>Mode 1</strong>: Add glasses image to face.</li>
+										<li><strong>Mode 2</strong>: Add a hat image to the face.</li>
+										<li><strong>Mode 3</strong>: Add multiple images such as glasses, hats, and cigarettes.</li>
+										<li><strong>Mode 4</strong>: Apply the Sketch filter.</li>
+										<li><strong>Mode 5</strong>: Apply Cartoon Filter.</li>
+										<li><strong>Mode 6</strong>: Draws iconic key points on the hands and face.</li>
+									</ul>
+								</ul>
+							</li>
+							<li><strong>Feedback Tips</strong>:
+								<ul>
+									<li>The program displays the current gesture, FPS, and countdown information on the screen. If the mode switch is successful, the screen will display the name of the new mode.</li>
+								</ul>
+							</li>
+						</ol>
+
+						<!-- Implementation Logic of Gesture Recognition Section -->
+						<header>
+							<h3 style="font-size: 1.75em;">Implementation Logic of Gesture Recognition</h3>
+						</header>
+						<p>
+							The key to gesture recognition lies in the use of the hand keypoint coordinates provided by the MediaPipe Hands module. These keypoints include the tips of fingers (such as <code>THUMB_TIP</code>, <code>INDEX_FINGER_TIP</code>, etc.) and the joints connected to the palm (such as <code>INDEX_FINGER_MCP</code>). The program determines whether each finger is extended by comparing the Y coordinates of the finger tips and joints. Here are the specific steps:
+						</p>
+						<ol>
+							<li><strong>Extract hand key point coordinates</strong>:
+								<ul>
+									<li>The program first checks <code>hand_results.multi_hand_landmarks</code> if a hand is detected. If it is, traverse the key points of each hand.</li>
+									<li>Obtain the coordinates of the finger tip (such as <code>index_tip</code>) and the corresponding joint point (such as <code>index_mcp</code>).</li>
+								</ul>
+							</li>
+							<li><strong>Determine the state of each finger</strong>:
+								<ul>
+									<li>If the Y-value of the tip coordinate of a finger is less than the Y-value of the joint point (with the Y-axis facing down), it indicates that the finger is extended.</li>
+									<li>For example, <code>index_tip.y < index_mcp.y</code> means the index finger is extended.</li>
+								</ul>
+							</li>
+							<li><strong>Combining conditions for gesture classification</strong>:
+								<ul>
+									<li>The definition of different gestures is based on the extension of the fingers. Here are a few examples:</li>
+									<ul>
+										<li><strong>Gesture 1</strong>: Only the index finger is extended, the rest of the fingers are not extended.</li>
+										<li><strong>Gesture 2</strong>: The index and middle fingers are extended, and the rest of the fingers are not extended.</li>
+										<li><strong>Gesture 3</strong>: The index, middle, and ring fingers are extended, and the rest of the fingers are not extended.</li>
+										<li><strong>Gesture 4</strong>: The index finger, middle finger, little finger, and ring finger are extended, and the other fingers are not extended.</li>
+										<li><strong>Gesture 5</strong>: Extend all fingers.</li>
+										<li><strong>Gesture 6</strong>: Extend only the thumb and little finger to simulate the shape of a "telephone".</li>
+									</ul>
+								</ul>
+							</li>
+							<li><strong>Record after gesture is detected</strong>:
+								<ul>
+									<li>The program matches the detected gestures with predefined patterns, such as "Gesture 1" corresponding to "Mode 1".</li>
+									<li>If any known gestures cannot be matched, mark it as "Unknown Gesture".</li>
+								</ul>
+							</li>
+						</ol>
+
+						<!-- Performance Optimization Section -->
+						<header style="text-align: center;">
+							<h3 style="font-size: 1.75em;">Performance Optimization (Improving FPS Performance Optimization)</h3>
+						</header>
+						<p>
+							The realization of real-time face and limb key point detection and dynamic effect superposition on the resource-constrained Raspberry Pi platform faces the problems of high computational overhead and difficult to guarantee real-time performance. In order to ensure the smooth operation of the system while achieving a high frame rate (FPS), we have carried out performance optimization from three aspects: <strong>optimization of the detection module</strong>, <strong>frame rate control strategy</strong>, and <strong>multi-core parallelization processing</strong>. These optimization measures complement each other, significantly reducing the computational burden of the system and effectively improving the overall performance.
+						</p>
+
+						<!-- Simplified Keypoint Detection Modules Section -->
+						<header>
+							<h4 style="font-size: 1.2em;">Simplified Keypoint Detection Modules: From Holistic to Face Mesh and Hands</h4>
+						</header>
+						<p>
+							Although MediaPipe's Holistic model can detect faces, hands, and body poses, its comprehensive detection function brings a huge computational burden, especially the detection of body key points is not the core requirement of this project. When the Holistic model is run on the Raspberry Pi, it is easy to cause the frame rate to drop, and the system cannot respond in real time.
+						</p>
+						<p>
+							To address this issue, we have simplified the detection module by splitting Holistic into two more lightweight modules.
+						</p>
+						<ul>
+							<li><strong>Face Mesh (facial keypoint detection)</strong>: Focuses on keypoint detection in the face area, extracting 468 facial keypoints such as eyes, nose, mouth, and forehead. These points provide accurate coordinate references for adding dynamic effects such as glasses and hats.</li>
+							<li><strong>Hands (hand key point detection)</strong>: Focus on the detection and tracking of 21 key points on the hand, used to identify the user's gesture actions, thereby triggering mode switching.</li>
+						</ul>
+						<p>
+							By abandoning the full-body detection part in Holistic, the system significantly reduces computational redundancy while retaining its main functions. This targeted optimization enables the system to more efficiently utilize the limited computing resources of Raspberry Pi, ensuring that the detection module achieves faster inference speed while ensuring accuracy, laying the foundation for improving the overall frame rate.
+						</p>
+
+						<!-- Frame Rate Control Strategy Section -->
+						<header>
+							<h4 style="font-size: 1.2em;">Frame Rate Control Strategy: Frame Extraction and Frame Interpolation</h4>
+						</header>
+						<p>
+							In real-time video stream processing, frame-by-frame keypoint detection and dynamic effect overlay can lead to excessive computational burden, thereby affecting the system's response speed. In order to reduce system pressure without sacrificing visual effects, this project introduces frame extraction and frame interpolation strategies to balance computational overhead and image fluency.
+						</p>
+						<ul>
+							<li><strong>Frame extraction processing</strong>: The system does not perform keypoint detection on each frame, but extracts frames at certain intervals (such as detecting once every two frames). This can effectively reduce the number of model inference calls and reduce computational burden. In addition, for skipped frames, the system will still use the results obtained from the previous detection to ensure the continuity of visual effects.</li>
+							<li><strong>Frame interpolation display</strong>: When the system skips the detection of some frames, in order to maintain the smoothness of the picture, the system will display the intermediate frames through frame interpolation. This means that even if some frames are not newly detected, the special effects will still be superimposed and displayed based on the results of the previous frame, thus achieving a seamless and continuous effect visually.</li>
+						</ul>
+						<p>
+							This frame rate control strategy achieves a balance between detection accuracy and real-time performance, reduces redundant duplicate calculations, and visually eliminates obvious delays or lag. After testing, this method significantly improves the system frame rate without affecting the user experience, making the system smoother and more stable in the process of real-time detection and special effects overlay.
+						</p>
+
+						<!-- Multi-Core Parallel Processing Section -->
+						<header>
+							<h4 style="font-size: 1.2em;">Multi-Core Parallel Processing</h4>
+						</header>
+						<p>
+							The Raspberry Pi 4B is equipped with a quad-core ARM Cortex-A72 processor, which has certain multi-core parallel computing capabilities. However, by default, most tasks in the system are often executed by the core solo processor, resulting in underutilization of computing resources. Therefore, we introduced multi-core parallel processing in the system, reasonably allocating key tasks to different processing cores to improve task execution efficiency.
+						</p>
+						<p>
+							Optimization strategies include:
+						</p>
+						<ul>
+							<li><strong>Image preprocessing parallelization</strong>: Image resolution adjustment, frame rate control, and color space conversion and other image preprocessing tasks can be performed independently, and distributed to different cores through parallelization to shorten the overall processing time.</li>
+							<li><strong>Parallelization of keypoint detection</strong>: Face Mesh and Hands are performed independently and assigned to different CPU cores. This parallel execution avoids waiting time when detecting one by one in a single thread and maximizes the utilization of multi-core resources.</li>
+							<li><strong>Parallelization of special effects overlay and image rendering</strong>: After completing keypoint detection, the system will start an independent task thread for dynamic special effects overlay, and send the results back to the main thread for image rendering and display. This task separation method can effectively reduce the burden on the main thread and further improve the overall performance.</li>
+						</ul>
+						<p>
+							By reasonably parallelizing tasks such as image preprocessing, keypoint detection, and dynamic special effects overlay, the system can fully utilize the multi-core resources of Raspberry Pi, significantly improve task execution efficiency, and reduce processing latency. At the same time, the architecture design with clear task division ensures efficient collaboration between various modules and improves the overall operational stability of the system.
+						</p>
+
+						<!-- Results Section -->
+						<header>
+							<h2 style="font-size: 2em;">Results</h2>
+						</header>
+						<p>
+							The project successfully met the outlined goals by implementing a real-time face and hand keypoint detection system using Raspberry Pi. The system achieved six dynamic special effects modes: adding glasses, adding hats, combining accessories, Sketch contour effect, cartoon effect, and Skeleton effect. Gesture recognition functionality was also implemented, enabling users to switch modes through simple hand gestures, which enhanced interactivity. Optimization techniques, such as model simplification, frame extraction/interpolation strategies, and multi-core parallel processing, significantly improved the system's performance, ensuring low-latency, real-time operation despite the hardware limitations of Raspberry Pi.
+						</p>
+
+						<!-- Conclusions Section -->
+						<header>
+							<h2 style="font-size: 2em;">Conclusions</h2>
+						</header>
+						<p>
+							The project achieved its primary objectives of delivering a highly interactive and dynamic visual experience. The system demonstrated smooth and diverse real-time special effects, showcasing the potential of Raspberry Pi for real-time computer vision tasks. Optimizations ensured improved frame rates and response times. However, some challenges remained, including the limited resolution and quality of the effects due to the hardware's constrained computational power. Additionally, while the gesture recognition function worked well for basic interactions, it had limited flexibility and could not support complex or custom gestures.
+						</p>
+
+						<!-- Future Work Section -->
+						<header>
+							<h2 style="font-size: 2em;">Future Work</h2>
+						</header>
+						<ul>
+							<li><strong>Dynamic Special Effects</strong>: Expand the range of effects to include 3D virtual accessories, dynamic light and shadow effects, and high-quality virtual makeup to enhance visual expression and realism.</li>
+							<li><strong>Performance Optimization</strong>: Integrate hardware accelerators like Google Coral TPU or NVIDIA Jetson Nano to support higher resolution video inputs and more complex algorithms. Cloud-based collaborative computing could also offload heavy tasks, enabling more powerful effect rendering.</li>
+							<li><strong>User Experience</strong>: Optimize the user interface for better intuitiveness, add features to save and share special effect results, and expand the system to cross-platform applications on mobile and PC devices to meet diverse user needs and scenarios.</li>
+						</ul>
+
+						<header>
+							<h2 style="font-size: 2em;">Budget</h2>
+						</header>
+						<header>
+							<h2 style="font-size: 2em;">References</h2>
+						</header>
+						<header>
+							<h2 style="font-size: 2em;">Code Appendix</h2>
+						</header>
 					</article>
 
 				</div>
