@@ -603,14 +603,14 @@
 							<li><strong>Record after gesture is detected</strong>:
 								<ul>
 									<li>The program matches the detected gestures with predefined patterns, such as "Gesture 1" corresponding to "Mode 1".</li>
-									<li>If any known gestures cannot be matched, mark it as "Unknown Gesture".</li>
+									<li>If any gestures cannot be matched, mark it as "Unknown Gesture".</li>
 								</ul>
 							</li>
 						</ol>
 
 						<!-- Performance Optimization Section -->
 						<header style="text-align: center;">
-							<h3 style="font-size: 1.75em;">Performance Optimization (Improving FPS Performance Optimization)</h3>
+							<h3 style="font-size: 1.75em;">Performance Optimization (Improving FPS)</h3>
 						</header>
 						<p>
 							The realization of real-time face and limb key point detection and dynamic effect superposition on the resource-constrained Raspberry Pi platform faces the problems of high computational overhead and difficult to guarantee real-time performance. In order to ensure the smooth operation of the system while achieving a high frame rate (FPS), we have carried out performance optimization from three aspects: <strong>optimization of the detection module</strong>, <strong>frame rate control strategy</strong>, and <strong>multi-core parallelization processing</strong>. These optimization measures complement each other, significantly reducing the computational burden of the system and effectively improving the overall performance.
@@ -655,17 +655,8 @@
 						</header>
 						<p>
 							The Raspberry Pi 4B is equipped with a quad-core ARM Cortex-A72 processor, which has certain multi-core parallel computing capabilities. However, by default, most tasks in the system are often executed by the core solo processor, resulting in underutilization of computing resources. Therefore, we introduced multi-core parallel processing in the system, reasonably allocating key tasks to different processing cores to improve task execution efficiency.
-						</p>
-						<p>
-							Optimization strategies include:
-						</p>
-						<ul>
-							<li><strong>Image preprocessing parallelization</strong>: Image resolution adjustment, frame rate control, and color space conversion and other image preprocessing tasks can be performed independently, and distributed to different cores through parallelization to shorten the overall processing time.</li>
-							<li><strong>Parallelization of keypoint detection</strong>: Face Mesh and Hands are performed independently and assigned to different CPU cores. This parallel execution avoids waiting time when detecting one by one in a single thread and maximizes the utilization of multi-core resources.</li>
-							<li><strong>Parallelization of special effects overlay and image rendering</strong>: After completing keypoint detection, the system will start an independent task thread for dynamic special effects overlay, and send the results back to the main thread for image rendering and display. This task separation method can effectively reduce the burden on the main thread and further improve the overall performance.</li>
-						</ul>
-						<p>
-							By reasonably parallelizing tasks such as image preprocessing, keypoint detection, and dynamic special effects overlay, the system can fully utilize the multi-core resources of Raspberry Pi, significantly improve task execution efficiency, and reduce processing latency. At the same time, the architecture design with clear task division ensures efficient collaboration between various modules and improves the overall operational stability of the system.
+							In our project, we leveraged MediaPipe's built-in multi-core capabilities to optimize performance. MediaPipe uses a graph-based execution model and multi-threaded task scheduling, allowing tasks like Face Mesh and Hands keypoint detection to run independently on different CPU cores. This inherent parallelism efficiently utilizes the multi-core resources of the Raspberry Pi, ensuring real-time performance without the need for manual task allocation.
+							By reasonably parallelizing tasks such as image processing, keypoint detection, and dynamic special effects overlay, the system can fully utilize the multi-core resources of Raspberry Pi, significantly improve task execution efficiency, and reduce processing latency. At the same time, the architecture design with clear task division ensures efficient collaboration between various modules and improves the overall operational stability of the system.
 						</p>
 						<hr />
 						<!-- Results Section -->
@@ -690,8 +681,7 @@
 						</header>
 						<ul>
 							<li><strong>Dynamic Special Effects</strong>: Expand the range of effects to include 3D virtual accessories, dynamic light and shadow effects, and high-quality virtual makeup to enhance visual expression and realism.</li>
-							<li><strong>Performance Optimization</strong>: Integrate hardware accelerators like Google Coral TPU or NVIDIA Jetson Nano to support higher resolution video inputs and more complex algorithms. Cloud-based collaborative computing could also offload heavy tasks, enabling more powerful effect rendering.</li>
-							<li><strong>User Experience</strong>: Optimize the user interface for better intuitiveness, add features to save and share special effect results, and expand the system to cross-platform applications on mobile and PC devices to meet diverse user needs and scenarios.</li>
+							<li><strong>User Experience</strong>: Optimize the user interface for better intuitiveness, add features to save and share special effect results, and increase body motion detection and its interactive functionalities with the system.</li>
 						</ul>
 						<hr />
 						<header>
