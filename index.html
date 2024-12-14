@@ -36,6 +36,34 @@
 				border-right: 2px solid black;
 				animation: blink 0.7s step-end infinite;
 			}
+
+			.fancy-table {
+				width: 100%;
+				border-collapse: separate;
+				border-spacing: 0;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.fancy-table th, .fancy-table td {
+				padding: 12px;
+				border-bottom: 1px solid #ddd;
+				text-align: left;
+			}
+
+			.fancy-table thead {
+				background-color: #f4f4f4;
+			}
+
+			.fancy-table tbody tr:hover {
+				background-color: #f1f1f1;
+			}
+
+			.fancy-table th {
+				background-color: #e0e0e0;
+				font-weight: bold;
+			}
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -669,6 +697,78 @@
 						<header>
 							<h2 style="font-size: 2em;">Budget</h2>
 						</header>
+						<table class="fancy-table">
+							<thead>
+								<tr>
+									<th>Module</th>
+									<th>Num</th>
+									<th>Estimated cost / $</th>
+									<th>Source</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Raspberry Pi 4, 2G Ram</td>
+									<td>1</td>
+									<td>35</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Capacitive piTFT</td>
+									<td>1</td>
+									<td>35</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Raspberry Pi extension cable and header</td>
+									<td>1</td>
+									<td>-</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Raspberry Pi case</td>
+									<td>1</td>
+									<td>-</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>16G SD cards</td>
+									<td>2</td>
+									<td>20</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Raspberry Pi power supply</td>
+									<td>1</td>
+									<td>-</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Lab 3 robot kit</td>
+									<td>1</td>
+									<td>-</td>
+									<td>Standard Class Kit</td>
+								</tr>
+								<tr>
+									<td>Camera</td>
+									<td>1</td>
+									<td>25</td>
+									<td>Borrowed Project Parts</td>
+								</tr>
+								<tr>
+									<td>16G SD card</td>
+									<td>1</td>
+									<td>10</td>
+									<td>Borrowed Project Parts</td>
+								</tr>
+								<tr>
+									<td><strong>Total for the project</strong></td>
+									<td>-</td>
+									<td>35</td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
 						<hr />
 						<header>
 							<h2 style="font-size: 2em;">References</h2>
