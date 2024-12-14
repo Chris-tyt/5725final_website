@@ -1,0 +1,1789 @@
+<div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table>
+    <tr><td><pre style="margin: 0; line-height: 125%">
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+   10
+   11
+   12
+   13
+   14
+   15
+   16
+   17
+   18
+   19
+   20
+   21
+   22
+   23
+   24
+   25
+   26
+   27
+   28
+   29
+   30
+   31
+   32
+   33
+   34
+   35
+   36
+   37
+   38
+   39
+   40
+   41
+   42
+   43
+   44
+   45
+   46
+   47
+   48
+   49
+   50
+   51
+   52
+   53
+   54
+   55
+   56
+   57
+   58
+   59
+   60
+   61
+   62
+   63
+   64
+   65
+   66
+   67
+   68
+   69
+   70
+   71
+   72
+   73
+   74
+   75
+   76
+   77
+   78
+   79
+   80
+   81
+   82
+   83
+   84
+   85
+   86
+   87
+   88
+   89
+   90
+   91
+   92
+   93
+   94
+   95
+   96
+   97
+   98
+   99
+  100
+  101
+  102
+  103
+  104
+  105
+  106
+  107
+  108
+  109
+  110
+  111
+  112
+  113
+  114
+  115
+  116
+  117
+  118
+  119
+  120
+  121
+  122
+  123
+  124
+  125
+  126
+  127
+  128
+  129
+  130
+  131
+  132
+  133
+  134
+  135
+  136
+  137
+  138
+  139
+  140
+  141
+  142
+  143
+  144
+  145
+  146
+  147
+  148
+  149
+  150
+  151
+  152
+  153
+  154
+  155
+  156
+  157
+  158
+  159
+  160
+  161
+  162
+  163
+  164
+  165
+  166
+  167
+  168
+  169
+  170
+  171
+  172
+  173
+  174
+  175
+  176
+  177
+  178
+  179
+  180
+  181
+  182
+  183
+  184
+  185
+  186
+  187
+  188
+  189
+  190
+  191
+  192
+  193
+  194
+  195
+  196
+  197
+  198
+  199
+  200
+  201
+  202
+  203
+  204
+  205
+  206
+  207
+  208
+  209
+  210
+  211
+  212
+  213
+  214
+  215
+  216
+  217
+  218
+  219
+  220
+  221
+  222
+  223
+  224
+  225
+  226
+  227
+  228
+  229
+  230
+  231
+  232
+  233
+  234
+  235
+  236
+  237
+  238
+  239
+  240
+  241
+  242
+  243
+  244
+  245
+  246
+  247
+  248
+  249
+  250
+  251
+  252
+  253
+  254
+  255
+  256
+  257
+  258
+  259
+  260
+  261
+  262
+  263
+  264
+  265
+  266
+  267
+  268
+  269
+  270
+  271
+  272
+  273
+  274
+  275
+  276
+  277
+  278
+  279
+  280
+  281
+  282
+  283
+  284
+  285
+  286
+  287
+  288
+  289
+  290
+  291
+  292
+  293
+  294
+  295
+  296
+  297
+  298
+  299
+  300
+  301
+  302
+  303
+  304
+  305
+  306
+  307
+  308
+  309
+  310
+  311
+  312
+  313
+  314
+  315
+  316
+  317
+  318
+  319
+  320
+  321
+  322
+  323
+  324
+  325
+  326
+  327
+  328
+  329
+  330
+  331
+  332
+  333
+  334
+  335
+  336
+  337
+  338
+  339
+  340
+  341
+  342
+  343
+  344
+  345
+  346
+  347
+  348
+  349
+  350
+  351
+  352
+  353
+  354
+  355
+  356
+  357
+  358
+  359
+  360
+  361
+  362
+  363
+  364
+  365
+  366
+  367
+  368
+  369
+  370
+  371
+  372
+  373
+  374
+  375
+  376
+  377
+  378
+  379
+  380
+  381
+  382
+  383
+  384
+  385
+  386
+  387
+  388
+  389
+  390
+  391
+  392
+  393
+  394
+  395
+  396
+  397
+  398
+  399
+  400
+  401
+  402
+  403
+  404
+  405
+  406
+  407
+  408
+  409
+  410
+  411
+  412
+  413
+  414
+  415
+  416
+  417
+  418
+  419
+  420
+  421
+  422
+  423
+  424
+  425
+  426
+  427
+  428
+  429
+  430
+  431
+  432
+  433
+  434
+  435
+  436
+  437
+  438
+  439
+  440
+  441
+  442
+  443
+  444
+  445
+  446
+  447
+  448
+  449
+  450
+  451
+  452
+  453
+  454
+  455
+  456
+  457
+  458
+  459
+  460
+  461
+  462
+  463
+  464
+  465
+  466
+  467
+  468
+  469
+  470
+  471
+  472
+  473
+  474
+  475
+  476
+  477
+  478
+  479
+  480
+  481
+  482
+  483
+  484
+  485
+  486
+  487
+  488
+  489
+  490
+  491
+  492
+  493
+  494
+  495
+  496
+  497
+  498
+  499
+  500
+  501
+  502
+  503
+  504
+  505
+  506
+  507
+  508
+  509
+  510
+  511
+  512
+  513
+  514
+  515
+  516
+  517
+  518
+  519
+  520
+  521
+  522
+  523
+  524
+  525
+  526
+  527
+  528
+  529
+  530
+  531
+  532
+  533
+  534
+  535
+  536
+  537
+  538
+  539
+  540
+  541
+  542
+  543
+  544
+  545
+  546
+  547
+  548
+  549
+  550
+  551
+  552
+  553
+  554
+  555
+  556
+  557
+  558
+  559
+  560
+  561
+  562
+  563
+  564
+  565
+  566
+  567
+  568
+  569
+  570
+  571
+  572
+  573
+  574
+  575
+  576
+  577
+  578
+  579
+  580
+  581
+  582
+  583
+  584
+  585
+  586
+  587
+  588
+  589
+  590
+  591
+  592
+  593
+  594
+  595
+  596
+  597
+  598
+  599
+  600
+  601
+  602
+  603
+  604
+  605
+  606
+  607
+  608
+  609
+  610
+  611
+  612
+  613
+  614
+  615
+  616
+  617
+  618
+  619
+  620
+  621
+  622
+  623
+  624
+  625
+  626
+  627
+  628
+  629
+  630
+  631
+  632
+  633
+  634
+  635
+  636
+  637
+  638
+  639
+  640
+  641
+  642
+  643
+  644
+  645
+  646
+  647
+  648
+  649
+  650
+  651
+  652
+  653
+  654
+  655
+  656
+  657
+  658
+  659
+  660
+  661
+  662
+  663
+  664
+  665
+  666
+  667
+  668
+  669
+  670
+  671
+  672
+  673
+  674
+  675
+  676
+  677
+  678
+  679
+  680
+  681
+  682
+  683
+  684
+  685
+  686
+  687
+  688
+  689
+  690
+  691
+  692
+  693
+  694
+  695
+  696
+  697
+  698
+  699
+  700
+  701
+  702
+  703
+  704
+  705
+  706
+  707
+  708
+  709
+  710
+  711
+  712
+  713
+  714
+  715
+  716
+  717
+  718
+  719
+  720
+  721
+  722
+  723
+  724
+  725
+  726
+  727
+  728
+  729
+  730
+  731
+  732
+  733
+  734
+  735
+  736
+  737
+  738
+  739
+  740
+  741
+  742
+  743
+  744
+  745
+  746
+  747
+  748
+  749
+  750
+  751
+  752
+  753
+  754
+  755
+  756
+  757
+  758
+  759
+  760
+  761
+  762
+  763
+  764
+  765
+  766
+  767
+  768
+  769
+  770
+  771
+  772
+  773
+  774
+  775
+  776
+  777
+  778
+  779
+  780
+  781
+  782
+  783
+  784
+  785
+  786
+  787
+  788
+  789
+  790
+  791
+  792
+  793
+  794
+  795
+  796
+  797
+  798
+  799
+  800
+  801
+  802
+  803
+  804
+  805
+  806
+  807
+  808
+  809
+  810
+  811
+  812
+  813
+  814
+  815
+  816
+  817
+  818
+  819
+  820
+  821
+  822
+  823
+  824
+  825
+  826
+  827
+  828
+  829
+  830
+  831
+  832
+  833
+  834
+  835
+  836
+  837
+  838
+  839
+  840
+  841
+  842
+  843
+  844
+  845
+  846
+  847
+  848
+  849
+  850
+  851
+  852
+  853
+  854
+  855
+  856
+  857
+  858
+  859
+  860
+  861
+  862
+  863
+  864
+  865
+  866
+  867
+  868
+  869
+  870
+  871
+  872
+  873
+  874
+  875
+  876
+  877
+  878
+  879
+  880
+  881
+  882
+  883
+  884
+  885
+  886
+  887
+  888
+  889
+  890
+  891
+  892</pre>
+  </td><td><pre style="margin: 0; line-height: 125%">
+  <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">picamera2</span> <span style="color: #007020; font-weight: bold">import</span> Picamera2
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">cv2</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">mediapipe</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mp</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pygame</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">np</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">os</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">sys</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">RPi.GPIO</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">GPIO</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">time</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">math</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pygame</span><span style="color: #666666">,</span><span style="color: #0e84b5; font-weight: bold">pigame</span>
+  <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">pygame.locals</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
+  <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">cartoonize</span> <span style="color: #007020; font-weight: bold">import</span> caart
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- flag set -----------------</span>
+  RUNNING <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+  in_start_menu <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- time set -----------------</span>
+  start_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
+  run_time <span style="color: #666666">=</span> <span style="color: #40a070">1000</span>
+  fps_start_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
+  fps <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- GPIO set -----------------</span>
+  GPIO<span style="color: #666666">.</span>setmode(GPIO<span style="color: #666666">.</span>BCM)
+  GPIO<span style="color: #666666">.</span>setup(<span style="color: #40a070">27</span>, GPIO<span style="color: #666666">.</span>IN, pull_up_down<span style="color: #666666">=</span>GPIO<span style="color: #666666">.</span>PUD_UP)
+  
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">GPIO27_callback</span>(channel):
+      <span style="color: #007020; font-weight: bold">global</span> RUNNING
+      <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Quit....&quot;</span>)
+      RUNNING <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+  
+  GPIO<span style="color: #666666">.</span>add_event_detect(<span style="color: #40a070">27</span>, GPIO<span style="color: #666666">.</span>FALLING, callback<span style="color: #666666">=</span>GPIO27_callback, bouncetime<span style="color: #666666">=</span><span style="color: #40a070">200</span>)
+  
+  <span style="color: #60a0b0; font-style: italic"># Set SDL environment to ensure PiTFT display</span>
+  os<span style="color: #666666">.</span>putenv(<span style="color: #4070a0">&#39;SDL_VIDEODRIVER&#39;</span>, <span style="color: #4070a0">&#39;fbcon&#39;</span>)  <span style="color: #60a0b0; font-style: italic"># Frame cache</span>
+  os<span style="color: #666666">.</span>putenv(<span style="color: #4070a0">&#39;SDL_FBDEV&#39;</span>, <span style="color: #4070a0">&#39;/dev/fb0&#39;</span>)
+  os<span style="color: #666666">.</span>putenv(<span style="color: #4070a0">&#39;SDL_MOUSEDRV&#39;</span>, <span style="color: #4070a0">&#39;dummy&#39;</span>)
+  os<span style="color: #666666">.</span>putenv(<span style="color: #4070a0">&#39;SDL_MOUSEDEV&#39;</span>, <span style="color: #4070a0">&#39;/dev/null&#39;</span>)
+  os<span style="color: #666666">.</span>putenv(<span style="color: #4070a0">&#39;DISPLAY&#39;</span>, <span style="color: #4070a0">&#39;&#39;</span>)
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- pygame set -----------------</span>
+  <span style="color: #60a0b0; font-style: italic"># Initialize pygame</span>
+  pygame<span style="color: #666666">.</span>init()
+  pitft <span style="color: #666666">=</span> pigame<span style="color: #666666">.</span>PiTft()
+  screen_size <span style="color: #666666">=</span> (<span style="color: #40a070">320</span>, <span style="color: #40a070">240</span>)
+  screen <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>display<span style="color: #666666">.</span>set_mode(screen_size)
+  pygame<span style="color: #666666">.</span>display<span style="color: #666666">.</span>set_caption(<span style="color: #4070a0">&#39;Magic Menu&#39;</span>)
+  screen<span style="color: #666666">.</span>fill((<span style="color: #40a070">0</span>,<span style="color: #40a070">0</span>,<span style="color: #40a070">0</span>))
+  pygame<span style="color: #666666">.</span>display<span style="color: #666666">.</span>update()
+  
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- display set -----------------</span>
+  <span style="color: #60a0b0; font-style: italic"># pygame.mouse.set_visible(False)</span>
+  <span style="color: #60a0b0; font-style: italic"># Colors</span>
+  ORANGE <span style="color: #666666">=</span> (<span style="color: #40a070">255</span>, <span style="color: #40a070">165</span>, <span style="color: #40a070">0</span>)
+  YELLOW <span style="color: #666666">=</span> (<span style="color: #40a070">255</span>, <span style="color: #40a070">255</span>, <span style="color: #40a070">0</span>)
+  BLACK <span style="color: #666666">=</span> (<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>)
+  RED <span style="color: #666666">=</span> (<span style="color: #40a070">255</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>)
+  WHITE <span style="color: #666666">=</span> (<span style="color: #40a070">255</span>, <span style="color: #40a070">255</span>, <span style="color: #40a070">255</span>)
+  <span style="color: #60a0b0; font-style: italic"># Define colors for the grid</span>
+  BLUE <span style="color: #666666">=</span> (<span style="color: #40a070">0</span>, <span style="color: #40a070">116</span>, <span style="color: #40a070">217</span>)      <span style="color: #60a0b0; font-style: italic"># #0074D9</span>
+  NAVY <span style="color: #666666">=</span> (<span style="color: #40a070">0</span>, <span style="color: #40a070">31</span>, <span style="color: #40a070">63</span>)        <span style="color: #60a0b0; font-style: italic"># #001F3F</span>
+  GOLD <span style="color: #666666">=</span> (<span style="color: #40a070">255</span>, <span style="color: #40a070">195</span>, <span style="color: #40a070">0</span>)      <span style="color: #60a0b0; font-style: italic"># #FFC300</span>
+  GRAY <span style="color: #666666">=</span> (<span style="color: #40a070">179</span>, <span style="color: #40a070">179</span>, <span style="color: #40a070">179</span>)    <span style="color: #60a0b0; font-style: italic"># #B3B3B3</span>
+  BEIGE <span style="color: #666666">=</span> (<span style="color: #40a070">253</span>, <span style="color: #40a070">245</span>, <span style="color: #40a070">230</span>)   <span style="color: #60a0b0; font-style: italic"># #FDF5E6</span>
+  FOREST <span style="color: #666666">=</span> (<span style="color: #40a070">34</span>, <span style="color: #40a070">139</span>, <span style="color: #40a070">34</span>)    <span style="color: #60a0b0; font-style: italic"># #228B22</span>
+  
+  font <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>font<span style="color: #666666">.</span>Font(<span style="color: #007020">None</span>, <span style="color: #40a070">30</span>)
+  font_mid <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>font<span style="color: #666666">.</span>Font(<span style="color: #007020">None</span>, <span style="color: #40a070">45</span>)
+  font_big <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>font<span style="color: #666666">.</span>Font(<span style="color: #007020">None</span>, <span style="color: #40a070">60</span>)
+  options <span style="color: #666666">=</span> [<span style="color: #4070a0">&#39;glass&#39;</span>, <span style="color: #4070a0">&#39;hat&#39;</span>, <span style="color: #4070a0">&#39;all&#39;</span>, <span style="color: #4070a0">&#39;sketch&#39;</span>, <span style="color: #4070a0">&#39;cartoon&#39;</span>, <span style="color: #4070a0">&#39;skeleton&#39;</span>]
+  clock <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>time<span style="color: #666666">.</span>Clock()
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- camera set -----------------</span>
+  <span style="color: #60a0b0; font-style: italic"># Initialize PiCamera2</span>
+  picam2 <span style="color: #666666">=</span> Picamera2()
+  picam2<span style="color: #666666">.</span>configure(picam2<span style="color: #666666">.</span>create_preview_configuration(main<span style="color: #666666">=</span>{<span style="color: #4070a0">&quot;size&quot;</span>: (<span style="color: #40a070">320</span>, <span style="color: #40a070">240</span>)}))
+  picam2<span style="color: #666666">.</span>start()
+  
+  <span style="color: #60a0b0; font-style: italic"># Initialize MediaPipe</span>
+  mp_drawing <span style="color: #666666">=</span> mp<span style="color: #666666">.</span>solutions<span style="color: #666666">.</span>drawing_utils
+  mp_face_mesh <span style="color: #666666">=</span> mp<span style="color: #666666">.</span>solutions<span style="color: #666666">.</span>face_mesh
+  mp_hands <span style="color: #666666">=</span> mp<span style="color: #666666">.</span>solutions<span style="color: #666666">.</span>hands
+  <span style="color: #60a0b0; font-style: italic"># mp_holistic = mp.solutions.holistic</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- frame set -----------------</span>
+  frame_count <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+  frame_interval <span style="color: #666666">=</span> <span style="color: #40a070">2</span>
+  result <span style="color: #666666">=</span> <span style="color: #007020">None</span>
+  
+  fps_frame_count <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># ----------------- mode flags -----------------</span>
+  mode1 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Glasses filter mode</span>
+  mode2 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Hat filter mode</span>
+  mode3 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># All filters mode (glasses + hat + cigarette)</span>
+  mode4 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Sketch filter mode</span>
+  mode5 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Cartoon filter mode</span>
+  mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Skeleton/wireframe mode</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># Global variables for countdown</span>
+  countdown_active <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+  countdown_start_time <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+  countdown_duration <span style="color: #666666">=</span> <span style="color: #40a070">3</span>  <span style="color: #60a0b0; font-style: italic"># 3 seconds countdown</span>
+  new_mode <span style="color: #666666">=</span> <span style="color: #007020">None</span>
+  
+  <span style="color: #60a0b0; font-style: italic"># read glasses image</span>
+  glasses_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>imread(<span style="color: #4070a0">&#39;./assets/glasses.png&#39;</span>, cv2<span style="color: #666666">.</span>IMREAD_UNCHANGED)  <span style="color: #60a0b0; font-style: italic"># Include alpha channel</span>
+  <span style="color: #007020; font-weight: bold">if</span> glasses_img <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020">None</span>:
+      <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Error: Glasses image not found. Please check the path.&quot;</span>)
+      <span style="color: #007020">exit</span>()
+  
+  hat_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>imread(<span style="color: #4070a0">&#39;./assets/hat.png&#39;</span>, cv2<span style="color: #666666">.</span>IMREAD_UNCHANGED)  <span style="color: #60a0b0; font-style: italic"># Include alpha channel</span>
+  <span style="color: #007020; font-weight: bold">if</span> glasses_img <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020">None</span>:
+      <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Error: Hat image not found. Please check the path.&quot;</span>)
+      <span style="color: #007020">exit</span>()
+  
+  cigarette_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>imread(<span style="color: #4070a0">&#39;./assets/cigarette.png&#39;</span>, cv2<span style="color: #666666">.</span>IMREAD_UNCHANGED)  <span style="color: #60a0b0; font-style: italic"># Include alpha channel</span>
+  <span style="color: #007020; font-weight: bold">if</span> cigarette_img <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020">None</span>:
+      <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Error: Cigarette image not found. Please check the path.&quot;</span>)
+      <span style="color: #007020">exit</span>()
+  
+  <span style="color: #60a0b0; font-style: italic"># Add near the image loading section at the beginning of the file</span>
+  button_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>imread(<span style="color: #4070a0">&#39;./assets/button.png&#39;</span>, cv2<span style="color: #666666">.</span>IMREAD_UNCHANGED)  <span style="color: #60a0b0; font-style: italic"># Read button image</span>
+  <span style="color: #007020; font-weight: bold">if</span> button_img <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020">None</span>:
+      <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Error: Button image not found. Please check the path.&quot;</span>)
+      <span style="color: #007020">exit</span>()
+  
+  <span style="color: #60a0b0; font-style: italic"># Display start menu with project title and options</span>
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">display_start_menu</span>():
+      <span style="color: #60a0b0; font-style: italic"># Fill top half with orange and bottom half with yellow</span>
+      screen<span style="color: #666666">.</span>fill(ORANGE, rect<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">320</span>, <span style="color: #40a070">100</span>))
+      screen<span style="color: #666666">.</span>fill(YELLOW, rect<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">100</span>, <span style="color: #40a070">320</span>, <span style="color: #40a070">140</span>))
+      
+      <span style="color: #60a0b0; font-style: italic"># Draw circles at (160, 100)</span>
+      pygame<span style="color: #666666">.</span>draw<span style="color: #666666">.</span>circle(screen, YELLOW, (<span style="color: #40a070">160</span>, <span style="color: #40a070">80</span>), <span style="color: #40a070">80</span>)  <span style="color: #60a0b0; font-style: italic"># Larger yellow circle</span>
+      pygame<span style="color: #666666">.</span>draw<span style="color: #666666">.</span>circle(screen, ORANGE, (<span style="color: #40a070">160</span>, <span style="color: #40a070">80</span>), <span style="color: #40a070">70</span>)  <span style="color: #60a0b0; font-style: italic"># Smaller orange circle</span>
+  
+      <span style="color: #60a0b0; font-style: italic"># Display title in the middle of the top half</span>
+      title_surface_b <span style="color: #666666">=</span> font_big<span style="color: #666666">.</span>render(<span style="color: #4070a0">&#39;Magic&#39;</span>, <span style="color: #007020">True</span>, WHITE)
+      title_rect_b <span style="color: #666666">=</span> title_surface_b<span style="color: #666666">.</span>get_rect(center<span style="color: #666666">=</span>(<span style="color: #40a070">170</span>, <span style="color: #40a070">65</span>))
+      screen<span style="color: #666666">.</span>blit(title_surface_b, title_rect_b)
+  
+      title_surface <span style="color: #666666">=</span> font_big<span style="color: #666666">.</span>render(<span style="color: #4070a0">&#39;Magic&#39;</span>, <span style="color: #007020">True</span>, BLACK)
+      title_rect <span style="color: #666666">=</span> title_surface<span style="color: #666666">.</span>get_rect(center<span style="color: #666666">=</span>(<span style="color: #40a070">160</span>, <span style="color: #40a070">75</span>))
+      screen<span style="color: #666666">.</span>blit(title_surface, title_rect)
+  
+      <span style="color: #60a0b0; font-style: italic"># Calculate dimensions for each grid cell</span>
+      cell_width <span style="color: #666666">=</span> <span style="color: #40a070">320</span> <span style="color: #666666">//</span> <span style="color: #40a070">3</span>
+      cell_height <span style="color: #666666">=</span> <span style="color: #40a070">140</span> <span style="color: #666666">//</span> <span style="color: #40a070">2</span>  <span style="color: #60a0b0; font-style: italic"># (240-100) / 2 = 70</span>
+  
+      <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">6</span>):
+          row <span style="color: #666666">=</span> i <span style="color: #666666">//</span> <span style="color: #40a070">3</span>
+          col <span style="color: #666666">=</span> i <span style="color: #666666">%</span> <span style="color: #40a070">3</span>
+          x <span style="color: #666666">=</span> col <span style="color: #666666">*</span> cell_width
+          y <span style="color: #666666">=</span> <span style="color: #40a070">100</span> <span style="color: #666666">+</span> row <span style="color: #666666">*</span> cell_height
+          <span style="color: #60a0b0; font-style: italic"># screen.fill(colors[i], rect=(x, y, cell_width, cell_height))</span>
+          
+          <span style="color: #60a0b0; font-style: italic"># Calculate the size and position of the button image</span>
+          button_size <span style="color: #666666">=</span> (<span style="color: #007020">int</span>(cell_width <span style="color: #666666">*</span> <span style="color: #40a070">0.9</span>), <span style="color: #007020">int</span>(cell_height <span style="color: #666666">*</span> <span style="color: #40a070">0.9</span>))
+          button_x <span style="color: #666666">=</span> x <span style="color: #666666">+</span> (cell_width <span style="color: #666666">-</span> button_size[<span style="color: #40a070">0</span>]) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          button_y <span style="color: #666666">=</span> y <span style="color: #666666">+</span> (cell_height <span style="color: #666666">-</span> button_size[<span style="color: #40a070">1</span>]) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          
+          <span style="color: #60a0b0; font-style: italic"># Resize the button image</span>
+          resized_button <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(button_img, button_size)
+          <span style="color: #60a0b0; font-style: italic"># rotate the image 90 degrees clockwise</span>
+          rotated_button <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>rotate(resized_button, cv2<span style="color: #666666">.</span>ROTATE_90_CLOCKWISE)
+          
+          <span style="color: #60a0b0; font-style: italic"># Correctly handle the transparent channel</span>
+          <span style="color: #007020; font-weight: bold">if</span> rotated_button<span style="color: #666666">.</span>shape[<span style="color: #40a070">2</span>] <span style="color: #666666">==</span> <span style="color: #40a070">4</span>:  <span style="color: #60a0b0; font-style: italic"># Check if there is an alpha channel</span>
+              <span style="color: #60a0b0; font-style: italic"># Separate BGR and alpha channels</span>
+              bgr <span style="color: #666666">=</span> rotated_button[:, :, :<span style="color: #40a070">3</span>]
+              alpha <span style="color: #666666">=</span> rotated_button[:, :, <span style="color: #40a070">3</span>]
+  
+              <span style="color: #60a0b0; font-style: italic"># Convert to RGB</span>
+              rgb <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(bgr, cv2<span style="color: #666666">.</span>COLOR_BGR2RGB)
+  
+              <span style="color: #60a0b0; font-style: italic"># Create surface with alpha</span>
+              button_surface <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>Surface(rgb<span style="color: #666666">.</span>shape[:<span style="color: #666666">-</span><span style="color: #40a070">1</span>], pygame<span style="color: #666666">.</span>SRCALPHA)
+  
+              <span style="color: #60a0b0; font-style: italic"># Convert surface to a compatible format</span>
+              button_surface <span style="color: #666666">=</span> button_surface<span style="color: #666666">.</span>convert_alpha()  <span style="color: #60a0b0; font-style: italic"># Use convert_alpha() for surfaces with alpha</span>
+  
+              pygame<span style="color: #666666">.</span>surfarray<span style="color: #666666">.</span>pixels3d(button_surface)[:] <span style="color: #666666">=</span> rgb
+              pygame<span style="color: #666666">.</span>surfarray<span style="color: #666666">.</span>pixels_alpha(button_surface)[:] <span style="color: #666666">=</span> alpha
+  
+          screen<span style="color: #666666">.</span>blit(button_surface, (button_x, button_y))
+  
+      <span style="color: #60a0b0; font-style: italic"># Display options</span>
+      <span style="color: #007020; font-weight: bold">for</span> i, option <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(options):
+          row <span style="color: #666666">=</span> i <span style="color: #666666">//</span> <span style="color: #40a070">3</span>
+          col <span style="color: #666666">=</span> i <span style="color: #666666">%</span> <span style="color: #40a070">3</span>
+          x_position <span style="color: #666666">=</span> col <span style="color: #666666">*</span> cell_width <span style="color: #666666">+</span> cell_width<span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          y_position <span style="color: #666666">=</span> <span style="color: #40a070">100</span> <span style="color: #666666">+</span> row <span style="color: #666666">*</span> cell_height <span style="color: #666666">+</span> cell_height<span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          
+          option_surface <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(f<span style="color: #4070a0">&#39;{option}&#39;</span>, <span style="color: #007020">True</span>, BEIGE)
+          option_rect <span style="color: #666666">=</span> option_surface<span style="color: #666666">.</span>get_rect(center<span style="color: #666666">=</span>(x_position, y_position))
+          screen<span style="color: #666666">.</span>blit(option_surface, option_rect)
+  
+      pygame<span style="color: #666666">.</span>display<span style="color: #666666">.</span>update()
+  
+  <span style="color: #60a0b0; font-style: italic"># Function to check which option is selected</span>
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">check_option_selection</span>(x, y):
+      <span style="color: #007020; font-weight: bold">global</span> mode1, mode2, mode3, mode4, mode5, mode6
+      <span style="color: #60a0b0; font-style: italic"># Calculate dimensions for each grid cell</span>
+      cell_width <span style="color: #666666">=</span> <span style="color: #40a070">320</span> <span style="color: #666666">//</span> <span style="color: #40a070">3</span>
+      cell_height <span style="color: #666666">=</span> <span style="color: #40a070">140</span> <span style="color: #666666">//</span> <span style="color: #40a070">2</span>  <span style="color: #60a0b0; font-style: italic"># (240-100) / 2 = 70</span>
+      
+      <span style="color: #007020; font-weight: bold">for</span> i, option <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(options):
+          row <span style="color: #666666">=</span> i <span style="color: #666666">//</span> <span style="color: #40a070">3</span>
+          col <span style="color: #666666">=</span> i <span style="color: #666666">%</span> <span style="color: #40a070">3</span>
+          x_position <span style="color: #666666">=</span> col <span style="color: #666666">*</span> cell_width <span style="color: #666666">+</span> cell_width<span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          y_position <span style="color: #666666">=</span> <span style="color: #40a070">100</span> <span style="color: #666666">+</span> row <span style="color: #666666">*</span> cell_height <span style="color: #666666">+</span> cell_height<span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+          
+          <span style="color: #60a0b0; font-style: italic"># Create a rectangle around the button (40 pixels padding)</span>
+          option_rect <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>Rect(x_position <span style="color: #666666">-</span> <span style="color: #40a070">40</span>, y_position <span style="color: #666666">-</span> <span style="color: #40a070">15</span>, <span style="color: #40a070">80</span>, <span style="color: #40a070">40</span>)
+          
+          <span style="color: #007020; font-weight: bold">if</span> option_rect<span style="color: #666666">.</span>collidepoint(x, y):
+              <span style="color: #007020; font-weight: bold">print</span>(option)
+              <span style="color: #60a0b0; font-style: italic"># Reset all modes</span>
+              mode1 <span style="color: #666666">=</span> mode2 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+              <span style="color: #60a0b0; font-style: italic"># Set the selected mode</span>
+              <span style="color: #007020; font-weight: bold">if</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;glass&#39;</span>:
+                  mode1 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">elif</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;hat&#39;</span>:
+                  mode2 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">elif</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;all&#39;</span>:
+                  mode3 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">elif</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;sketch&#39;</span>:
+                  mode4 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">elif</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;cartoon&#39;</span>:
+                  mode5 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">elif</span> option <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;skeleton&#39;</span>:
+                  mode6 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+              <span style="color: #007020; font-weight: bold">return</span> option
+      <span style="color: #007020; font-weight: bold">return</span> <span style="color: #007020">None</span>
+  
+  
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">sketch_image</span>(img):
+      <span style="color: #60a0b0; font-style: italic"># Convert the image to grayscale</span>
+      gray <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(img, cv2<span style="color: #666666">.</span>COLOR_BGR2GRAY)
+      <span style="color: #60a0b0; font-style: italic"># Apply median blur</span>
+      gray <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>medianBlur(gray, <span style="color: #40a070">5</span>)
+      <span style="color: #60a0b0; font-style: italic"># Use Canny edge detection</span>
+      edges <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>Canny(gray, <span style="color: #40a070">50</span>, <span style="color: #40a070">150</span>)  <span style="color: #60a0b0; font-style: italic"># Adjust thresholds to enhance edges</span>
+      <span style="color: #60a0b0; font-style: italic"># Use Laplacian operator to enhance edges</span>
+      laplacian <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>Laplacian(gray, cv2<span style="color: #666666">.</span>CV_8U, ksize<span style="color: #666666">=</span><span style="color: #40a070">5</span>)
+      edges <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>bitwise_or(edges, laplacian)
+  
+      <span style="color: #60a0b0; font-style: italic"># Downsample the image</span>
+      color <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>bilateralFilter(img, <span style="color: #40a070">9</span>, <span style="color: #40a070">250</span>, <span style="color: #40a070">250</span>)
+      <span style="color: #60a0b0; font-style: italic"># Combine edges with color image</span>
+      edges_colored <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(edges, cv2<span style="color: #666666">.</span>COLOR_GRAY2BGR)
+      cartoon <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>bitwise_and(color, edges_colored)
+      <span style="color: #007020; font-weight: bold">return</span> edges_colored
+  
+  <span style="color: #60a0b0; font-style: italic"># overlay image</span>
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">overlay_image</span>(bg_image, overlay_image, x, y, overlay_size):
+      overlay <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(overlay_image, overlay_size)
+      h, w, _ <span style="color: #666666">=</span> overlay<span style="color: #666666">.</span>shape
+      alpha_overlay <span style="color: #666666">=</span> overlay[:, :, <span style="color: #40a070">3</span>] <span style="color: #666666">/</span> <span style="color: #40a070">255.0</span>
+      alpha_bg <span style="color: #666666">=</span> <span style="color: #40a070">1.0</span> <span style="color: #666666">-</span> alpha_overlay
+  
+      <span style="color: #60a0b0; font-style: italic"># Ensure overlay position is within background image bounds</span>
+      <span style="color: #007020; font-weight: bold">if</span> y <span style="color: #666666">&lt;</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">or</span> x <span style="color: #666666">&lt;</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">or</span> y <span style="color: #666666">+</span> h <span style="color: #666666">&gt;</span> bg_image<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #007020; font-weight: bold">or</span> x <span style="color: #666666">+</span> w <span style="color: #666666">&gt;</span> bg_image<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>]:
+          <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Overlay position is out of bounds, skipping overlay.&quot;</span>)
+          <span style="color: #007020; font-weight: bold">return</span>
+  
+      <span style="color: #007020; font-weight: bold">for</span> c <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">3</span>):
+          bg_image[y:y<span style="color: #666666">+</span>h, x:x<span style="color: #666666">+</span>w, c] <span style="color: #666666">=</span> (alpha_overlay <span style="color: #666666">*</span> overlay[:, :, c] <span style="color: #666666">+</span>
+                                       alpha_bg <span style="color: #666666">*</span> bg_image[y:y<span style="color: #666666">+</span>h, x:x<span style="color: #666666">+</span>w, c])
+  
+  
+  <span style="color: #60a0b0; font-style: italic"># with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:</span>
+  <span style="color: #007020; font-weight: bold">with</span> mp_face_mesh<span style="color: #666666">.</span>FaceMesh(min_detection_confidence<span style="color: #666666">=</span><span style="color: #40a070">0.5</span>, min_tracking_confidence<span style="color: #666666">=</span><span style="color: #40a070">0.5</span>) <span style="color: #007020; font-weight: bold">as</span> face_mesh, \
+       mp_hands<span style="color: #666666">.</span>Hands(min_detection_confidence<span style="color: #666666">=</span><span style="color: #40a070">0.5</span>, min_tracking_confidence<span style="color: #666666">=</span><span style="color: #40a070">0.5</span>) <span style="color: #007020; font-weight: bold">as</span> hands:
+      <span style="color: #007020; font-weight: bold">while</span> RUNNING:
+          <span style="color: #007020; font-weight: bold">if</span> time<span style="color: #666666">.</span>time() <span style="color: #666666">-</span> start_time <span style="color: #666666">&gt;</span> run_time:
+              <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Time&#39;s up! Exiting...&quot;</span>)
+              RUNNING <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+          pitft<span style="color: #666666">.</span>update()
+          <span style="color: #007020; font-weight: bold">for</span> event <span style="color: #007020; font-weight: bold">in</span> pygame<span style="color: #666666">.</span>event<span style="color: #666666">.</span>get():
+              <span style="color: #007020; font-weight: bold">if</span> event<span style="color: #666666">.</span>type <span style="color: #007020; font-weight: bold">is</span> MOUSEBUTTONDOWN:
+                  <span style="color: #007020; font-weight: bold">if</span> in_start_menu:
+                      x, y <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>mouse<span style="color: #666666">.</span>get_pos()
+                      selected_option <span style="color: #666666">=</span> check_option_selection(x, y)
+                      <span style="color: #007020; font-weight: bold">if</span> selected_option <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020; font-weight: bold">not</span> <span style="color: #007020">None</span>:
+                          in_start_menu <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                  <span style="color: #007020; font-weight: bold">else</span>:
+                      <span style="color: #60a0b0; font-style: italic"># Handle other events during real-time detection if necessary</span>
+                      <span style="color: #007020; font-weight: bold">pass</span>
+              <span style="color: #007020; font-weight: bold">if</span> event<span style="color: #666666">.</span>type <span style="color: #666666">==</span> pygame<span style="color: #666666">.</span>KEYDOWN <span style="color: #007020; font-weight: bold">and</span> event<span style="color: #666666">.</span>key <span style="color: #666666">==</span> pygame<span style="color: #666666">.</span>K_q:
+                  RUNNING <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+  
+          <span style="color: #007020; font-weight: bold">if</span> in_start_menu:
+              display_start_menu()
+          <span style="color: #007020; font-weight: bold">else</span>:
+              <span style="color: #60a0b0; font-style: italic"># time.sleep(0.05)</span>
+              frame <span style="color: #666666">=</span> picam2<span style="color: #666666">.</span>capture_array()
+              <span style="color: #007020; font-weight: bold">if</span> frame <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020">None</span>:
+                  <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Unable to capture frame, please check the camera.&quot;</span>)
+                  <span style="color: #007020; font-weight: bold">break</span>
+  
+              <span style="color: #007020; font-weight: bold">if</span> frame_count<span style="color: #666666">%</span>frame_interval <span style="color: #666666">==</span> <span style="color: #40a070">0</span>:
+                  <span style="color: #60a0b0; font-style: italic"># Convert frame to RGB and process with MediaPipe</span>
+                  image <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(frame, cv2<span style="color: #666666">.</span>COLOR_BGR2RGB)
+                  image<span style="color: #666666">.</span>flags<span style="color: #666666">.</span>writeable <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                  <span style="color: #60a0b0; font-style: italic"># results = holistic.process(image)</span>
+                  face_results <span style="color: #666666">=</span> face_mesh<span style="color: #666666">.</span>process(image)
+                  hand_results <span style="color: #666666">=</span> hands<span style="color: #666666">.</span>process(image)
+                  image<span style="color: #666666">.</span>flags<span style="color: #666666">.</span>writeable <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                  image <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(image, cv2<span style="color: #666666">.</span>COLOR_RGB2BGR)
+                  frame_count <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+              <span style="color: #007020; font-weight: bold">else</span>:
+                  image <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(frame, cv2<span style="color: #666666">.</span>COLOR_BGR2RGB)
+                  image <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>cvtColor(image, cv2<span style="color: #666666">.</span>COLOR_RGB2BGR)
+              <span style="color: #60a0b0; font-style: italic"># Comment out the following line to see if no frames are extracted. Currently, two frames are extracted.</span>
+              <span style="color: #60a0b0; font-style: italic"># frame_count += 1</span>
+  
+              <span style="color: #60a0b0; font-style: italic"># Draw hand landmarks</span>
+              display_hand <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+              gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Unknown Gesture&quot;</span>
+              <span style="color: #007020; font-weight: bold">if</span> hand_results<span style="color: #666666">.</span>multi_hand_landmarks:
+                  <span style="color: #007020; font-weight: bold">for</span> hand_landmarks <span style="color: #007020; font-weight: bold">in</span> hand_results<span style="color: #666666">.</span>multi_hand_landmarks:
+                      <span style="color: #60a0b0; font-style: italic"># mp_drawing.draw_landmarks(</span>
+                      <span style="color: #60a0b0; font-style: italic">#     image, hand_landmarks, mp_hands.HAND_CONNECTIONS,</span>
+                      <span style="color: #60a0b0; font-style: italic">#     mp_drawing.DrawingSpec(color=(80, 22, 10), thickness=2, circle_radius=4),</span>
+                      <span style="color: #60a0b0; font-style: italic">#     mp_drawing.DrawingSpec(color=(80, 44, 121), thickness=2, circle_radius=2))</span>
+                      <span style="color: #60a0b0; font-style: italic"># Detect gestures</span>
+                      thumb_tip <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>THUMB_TIP]
+                      index_tip <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>INDEX_FINGER_TIP]
+                      middle_tip <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>MIDDLE_FINGER_TIP]
+                      ring_tip <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>RING_FINGER_TIP]
+                      pinky_tip <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>PINKY_TIP]
+                      index_mcp <span style="color: #666666">=</span> hand_landmarks<span style="color: #666666">.</span>landmark[mp_hands<span style="color: #666666">.</span>HandLandmark<span style="color: #666666">.</span>INDEX_FINGER_MCP]
+  
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 1: Only index finger up</span>
+                      <span style="color: #007020; font-weight: bold">if</span> (index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                          middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                          ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                          pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                          thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>x):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 1&quot;</span>
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 2: Index and middle fingers up</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> (index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>x):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 2&quot;</span>
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 3: Index, middle, and ring fingers up</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> (index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>x):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 3&quot;</span>
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 4: All fingers except thumb up</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> (index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>x):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 4&quot;</span>
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 5: All fingers up</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> (thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>x <span style="color: #007020; font-weight: bold">and</span> 
+                            index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 5&quot;</span>
+                      <span style="color: #60a0b0; font-style: italic"># Gesture 6: Only thumb and pinky up (phone gesture)</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> (thumb_tip<span style="color: #666666">.</span>x <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>x <span style="color: #007020; font-weight: bold">and</span> 
+                            pinky_tip<span style="color: #666666">.</span>y <span style="color: #666666">&lt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span>
+                            index_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            middle_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y <span style="color: #007020; font-weight: bold">and</span> 
+                            ring_tip<span style="color: #666666">.</span>y <span style="color: #666666">&gt;</span> index_mcp<span style="color: #666666">.</span>y):
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Gesture 6&quot;</span>
+                      <span style="color: #007020; font-weight: bold">else</span>:
+                          gesture <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Unknown Gesture&quot;</span>
+  
+                      <span style="color: #60a0b0; font-style: italic"># print(f&quot;Detected Gesture: {gesture}&quot;)</span>
+                      display_hand <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                      <span style="color: #60a0b0; font-style: italic"># cv2.putText(image, gesture, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)</span>
+  
+                      <span style="color: #60a0b0; font-style: italic"># Reset countdown if gesture doesn&#39;t match new_mode</span>
+                      <span style="color: #007020; font-weight: bold">if</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Unknown Gesture&quot;</span> <span style="color: #007020; font-weight: bold">and</span> \
+                      (new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 1&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 1&quot;</span> <span style="color: #007020; font-weight: bold">or</span> \
+                      new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 2&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 2&quot;</span> <span style="color: #007020; font-weight: bold">or</span> \
+                      new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 3&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 3&quot;</span> <span style="color: #007020; font-weight: bold">or</span> \
+                      new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 4&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 4&quot;</span> <span style="color: #007020; font-weight: bold">or</span> \
+                      new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 5&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 5&quot;</span> <span style="color: #007020; font-weight: bold">or</span> \
+                      new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 6&quot;</span> <span style="color: #007020; font-weight: bold">and</span> gesture <span style="color: #666666">!=</span> <span style="color: #4070a0">&quot;Gesture 6&quot;</span>):
+                          <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Reset countdown&quot;</span>)
+                          countdown_active <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                          new_mode <span style="color: #666666">=</span> <span style="color: #007020">None</span>
+  
+                      <span style="color: #60a0b0; font-style: italic"># Check and switch modes based on detected gesture</span>
+                      <span style="color: #007020; font-weight: bold">if</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 1&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode1:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 1&quot;</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 2&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode2:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 2&quot;</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 3&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode3:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 3&quot;</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 4&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode4:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 4&quot;</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 5&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode5:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 5&quot;</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> gesture <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Gesture 6&quot;</span> <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> mode6:
+                          new_mode <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;Mode 6&quot;</span>
+  
+                      <span style="color: #007020; font-weight: bold">if</span> new_mode <span style="color: #007020; font-weight: bold">and</span> <span style="color: #007020; font-weight: bold">not</span> countdown_active:
+                          countdown_active <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          countdown_start_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
+  
+  
+              <span style="color: #60a0b0; font-style: italic"># Inside the main loop, after rendering the gesture and FPS</span>
+              <span style="color: #007020; font-weight: bold">if</span> mode1:
+                  <span style="color: #007020; font-weight: bold">if</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                      <span style="color: #007020; font-weight: bold">for</span> face_landmarks <span style="color: #007020; font-weight: bold">in</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                          h, w, _ <span style="color: #666666">=</span> image<span style="color: #666666">.</span>shape
+                          left_eye_landmark <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">33</span>]
+                          right_eye_landmark <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">263</span>]
+  
+                          left_eye_x, left_eye_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(left_eye_landmark<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w), <span style="color: #007020">int</span>(left_eye_landmark<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h)
+                          right_eye_x, right_eye_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(right_eye_landmark<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w), <span style="color: #007020">int</span>(right_eye_landmark<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate midpoint, distance and angle for glasses placement</span>
+                          mid_x <span style="color: #666666">=</span> (left_eye_x <span style="color: #666666">+</span> right_eye_x) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          mid_y <span style="color: #666666">=</span> (left_eye_y <span style="color: #666666">+</span> right_eye_y) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          distance <span style="color: #666666">=</span> math<span style="color: #666666">.</span>sqrt((right_eye_x <span style="color: #666666">-</span> left_eye_x)<span style="color: #666666">**</span><span style="color: #40a070">2</span> <span style="color: #666666">+</span> (right_eye_y <span style="color: #666666">-</span> left_eye_y)<span style="color: #666666">**</span><span style="color: #40a070">2</span>)
+                          angle <span style="color: #666666">=</span> math<span style="color: #666666">.</span>degrees(math<span style="color: #666666">.</span>atan2((right_eye_y <span style="color: #666666">-</span> left_eye_y), (right_eye_x <span style="color: #666666">-</span> left_eye_x)))
+                          <span style="color: #60a0b0; font-style: italic"># print(angle)</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># Scale glasses (glasses width = 1.2x eye distance)</span>
+                          scale_factor <span style="color: #666666">=</span> <span style="color: #40a070">1.2</span>
+                          new_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(distance <span style="color: #666666">*</span> scale_factor)
+                          aspect_ratio <span style="color: #666666">=</span> glasses_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">/</span> glasses_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>]
+                          new_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> aspect_ratio)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Resize glasses first</span>
+                          resized_glasses <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(glasses_img, (new_width, new_height))
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate canvas size needed after rotation</span>
+                          angle_rad <span style="color: #666666">=</span> math<span style="color: #666666">.</span>radians(<span style="color: #666666">-</span>angle)  <span style="color: #60a0b0; font-style: italic"># Note the negative sign here</span>
+                          cos_a <span style="color: #666666">=</span> <span style="color: #007020">abs</span>(math<span style="color: #666666">.</span>cos(angle_rad))
+                          sin_a <span style="color: #666666">=</span> <span style="color: #007020">abs</span>(math<span style="color: #666666">.</span>sin(angle_rad))
+                          new_w <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> cos_a <span style="color: #666666">+</span> new_height <span style="color: #666666">*</span> sin_a)
+                          new_h <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> sin_a <span style="color: #666666">+</span> new_height <span style="color: #666666">*</span> cos_a)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Create larger canvas to accommodate rotated image</span>
+                          rot_mat <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>getRotationMatrix2D((new_width<span style="color: #666666">//</span><span style="color: #40a070">2</span>, new_height<span style="color: #666666">//</span><span style="color: #40a070">2</span>), <span style="color: #666666">-</span>angle, <span style="color: #40a070">1.0</span>)
+                          rot_mat[<span style="color: #40a070">0</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_w <span style="color: #666666">-</span> new_width)<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          rot_mat[<span style="color: #40a070">1</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_h <span style="color: #666666">-</span> new_height)<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          rotated_glasses <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>warpAffine(resized_glasses, rot_mat, (new_w, new_h))
+  
+                          <span style="color: #60a0b0; font-style: italic"># Adjust placement position</span>
+                          offset_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_height <span style="color: #666666">*</span> <span style="color: #40a070">0.3</span>)  <span style="color: #60a0b0; font-style: italic"># Reduce offset to make glasses closer to eyes</span>
+                          top_left_x <span style="color: #666666">=</span> mid_x <span style="color: #666666">-</span> new_w<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          top_left_y <span style="color: #666666">=</span> mid_y <span style="color: #666666">-</span> new_h<span style="color: #666666">//</span><span style="color: #40a070">2</span> <span style="color: #666666">-</span> offset_y
+  
+                          overlay_image(image, rotated_glasses, top_left_x, top_left_y, (new_w, new_h))
+              <span style="color: #007020; font-weight: bold">elif</span> mode2:
+                  <span style="color: #007020; font-weight: bold">if</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                      <span style="color: #007020; font-weight: bold">for</span> face_landmarks <span style="color: #007020; font-weight: bold">in</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                          h, w, _ <span style="color: #666666">=</span> image<span style="color: #666666">.</span>shape
+                          <span style="color: #60a0b0; font-style: italic"># Use forehead keypoint from face mesh</span>
+                          forehead <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">10</span>]  <span style="color: #60a0b0; font-style: italic"># Top of the head keypoint</span>
+                          chin <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">152</span>]  <span style="color: #60a0b0; font-style: italic"># Chin keypoint</span>
+                          left_cheek <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">234</span>]  <span style="color: #60a0b0; font-style: italic"># Left cheek keypoint</span>
+                          right_cheek <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">454</span>]  <span style="color: #60a0b0; font-style: italic"># Right cheek keypoint</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate face width and height</span>
+                          face_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">abs</span>(right_cheek<span style="color: #666666">.</span>x <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>x) <span style="color: #666666">*</span> w)
+                          face_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">abs</span>(chin<span style="color: #666666">.</span>y <span style="color: #666666">-</span> forehead<span style="color: #666666">.</span>y) <span style="color: #666666">*</span> h)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate head tilt angle and invert</span>
+                          delta_x <span style="color: #666666">=</span> right_cheek<span style="color: #666666">.</span>x <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>x
+                          delta_y <span style="color: #666666">=</span> right_cheek<span style="color: #666666">.</span>y <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>y
+                          angle <span style="color: #666666">=</span> <span style="color: #666666">-</span>np<span style="color: #666666">.</span>arctan2(delta_y, delta_x) <span style="color: #666666">*</span> (<span style="color: #40a070">180.0</span> <span style="color: #666666">/</span> np<span style="color: #666666">.</span>pi)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Determine hat position and size</span>
+                          scale_factor <span style="color: #666666">=</span> <span style="color: #40a070">1.5</span>  <span style="color: #60a0b0; font-style: italic"># Adjust this factor to change hat size</span>
+                          x_hat <span style="color: #666666">=</span> <span style="color: #007020">int</span>(forehead<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w) <span style="color: #666666">-</span> <span style="color: #007020">int</span>(face_width <span style="color: #666666">*</span> scale_factor) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          y_hat <span style="color: #666666">=</span> <span style="color: #007020">int</span>(forehead<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h) <span style="color: #666666">-</span> <span style="color: #007020">int</span>(face_height <span style="color: #666666">*</span> scale_factor) <span style="color: #666666">//</span> <span style="color: #40a070">2</span> <span style="color: #666666">+</span> <span style="color: #007020">int</span>(<span style="color: #40a070">0.2</span> <span style="color: #666666">*</span> face_height)  <span style="color: #60a0b0; font-style: italic"># Move hat down</span>
+  
+                          hat_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(face_width <span style="color: #666666">*</span> scale_factor)
+                          hat_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(hat_width <span style="color: #666666">*</span> hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">/</span> hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>])
+  
+                          <span style="color: #007020; font-weight: bold">if</span> y_hat <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> x_hat <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> (y_hat <span style="color: #666666">+</span> hat_height) <span style="color: #666666">&lt;=</span> h <span style="color: #007020; font-weight: bold">and</span> (x_hat <span style="color: #666666">+</span> hat_width) <span style="color: #666666">&lt;=</span> w:
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotation center</span>
+                              center <span style="color: #666666">=</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">//</span> <span style="color: #40a070">2</span>, hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">//</span> <span style="color: #40a070">2</span>)
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotation matrix</span>
+                              rotated_hat <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>getRotationMatrix2D(center, angle, <span style="color: #40a070">1.0</span>)
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotated bounding box</span>
+                              cos <span style="color: #666666">=</span> np<span style="color: #666666">.</span>abs(rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>])
+                              sin <span style="color: #666666">=</span> np<span style="color: #666666">.</span>abs(rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">1</span>])
+                              new_w <span style="color: #666666">=</span> <span style="color: #007020">int</span>((hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">*</span> sin) <span style="color: #666666">+</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">*</span> cos))
+                              new_h <span style="color: #666666">=</span> <span style="color: #007020">int</span>((hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">*</span> cos) <span style="color: #666666">+</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">*</span> sin))
+                              <span style="color: #60a0b0; font-style: italic"># Adjust translation part of rotation matrix</span>
+                              rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_w <span style="color: #666666">/</span> <span style="color: #40a070">2</span>) <span style="color: #666666">-</span> center[<span style="color: #40a070">0</span>]
+                              rotated_hat[<span style="color: #40a070">1</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_h <span style="color: #666666">/</span> <span style="color: #40a070">2</span>) <span style="color: #666666">-</span> center[<span style="color: #40a070">1</span>]
+                              <span style="color: #60a0b0; font-style: italic"># Rotate image</span>
+                              rotated_hat_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>warpAffine(hat_img, rotated_hat, (new_w, new_h), flags<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>INTER_LINEAR, borderMode<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>BORDER_CONSTANT, borderValue<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>))
+                              overlay_image(image, rotated_hat_img, x_hat, y_hat, (hat_width, hat_height))
+                          <span style="color: #007020; font-weight: bold">else</span>:
+                              <span style="color: #007020; font-weight: bold">print</span>(<span style="color: #4070a0">&quot;Hat position is out of bounds, skipping overlay.&quot;</span>)
+              <span style="color: #007020; font-weight: bold">elif</span> mode3:
+                  <span style="color: #007020; font-weight: bold">if</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                      <span style="color: #007020; font-weight: bold">for</span> face_landmarks <span style="color: #007020; font-weight: bold">in</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                          <span style="color: #60a0b0; font-style: italic"># glasses</span>
+                          h, w, _ <span style="color: #666666">=</span> image<span style="color: #666666">.</span>shape
+                          left_eye_landmark <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">33</span>]
+                          right_eye_landmark <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">263</span>]
+  
+                          left_eye_x, left_eye_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(left_eye_landmark<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w), <span style="color: #007020">int</span>(left_eye_landmark<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h)
+                          right_eye_x, right_eye_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(right_eye_landmark<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w), <span style="color: #007020">int</span>(right_eye_landmark<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate midpoint, distance and angle for glasses placement</span>
+                          mid_x <span style="color: #666666">=</span> (left_eye_x <span style="color: #666666">+</span> right_eye_x) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          mid_y <span style="color: #666666">=</span> (left_eye_y <span style="color: #666666">+</span> right_eye_y) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          distance <span style="color: #666666">=</span> math<span style="color: #666666">.</span>sqrt((right_eye_x <span style="color: #666666">-</span> left_eye_x)<span style="color: #666666">**</span><span style="color: #40a070">2</span> <span style="color: #666666">+</span> (right_eye_y <span style="color: #666666">-</span> left_eye_y)<span style="color: #666666">**</span><span style="color: #40a070">2</span>)
+                          angle <span style="color: #666666">=</span> math<span style="color: #666666">.</span>degrees(math<span style="color: #666666">.</span>atan2((right_eye_y <span style="color: #666666">-</span> left_eye_y), (right_eye_x <span style="color: #666666">-</span> left_eye_x)))
+                          <span style="color: #60a0b0; font-style: italic"># print(angle)</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># Scale glasses (glasses width = 1.2x eye distance)</span>
+                          scale_factor <span style="color: #666666">=</span> <span style="color: #40a070">1.2</span>
+                          new_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(distance <span style="color: #666666">*</span> scale_factor)
+                          aspect_ratio <span style="color: #666666">=</span> glasses_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">/</span> glasses_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>]
+                          new_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> aspect_ratio)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Resize glasses first</span>
+                          resized_glasses <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(glasses_img, (new_width, new_height))
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate canvas size needed after rotation</span>
+                          angle_rad <span style="color: #666666">=</span> math<span style="color: #666666">.</span>radians(<span style="color: #666666">-</span>angle)  <span style="color: #60a0b0; font-style: italic"># Note the negative sign here</span>
+                          cos_a <span style="color: #666666">=</span> <span style="color: #007020">abs</span>(math<span style="color: #666666">.</span>cos(angle_rad))
+                          sin_a <span style="color: #666666">=</span> <span style="color: #007020">abs</span>(math<span style="color: #666666">.</span>sin(angle_rad))
+                          new_w <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> cos_a <span style="color: #666666">+</span> new_height <span style="color: #666666">*</span> sin_a)
+                          new_h <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_width <span style="color: #666666">*</span> sin_a <span style="color: #666666">+</span> new_height <span style="color: #666666">*</span> cos_a)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Create larger canvas to accommodate rotated image</span>
+                          rot_mat <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>getRotationMatrix2D((new_width<span style="color: #666666">//</span><span style="color: #40a070">2</span>, new_height<span style="color: #666666">//</span><span style="color: #40a070">2</span>), <span style="color: #666666">-</span>angle, <span style="color: #40a070">1.0</span>)
+                          rot_mat[<span style="color: #40a070">0</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_w <span style="color: #666666">-</span> new_width)<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          rot_mat[<span style="color: #40a070">1</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_h <span style="color: #666666">-</span> new_height)<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          rotated_glasses <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>warpAffine(resized_glasses, rot_mat, (new_w, new_h))
+  
+                          <span style="color: #60a0b0; font-style: italic"># Adjust placement position</span>
+                          offset_y <span style="color: #666666">=</span> <span style="color: #007020">int</span>(new_height <span style="color: #666666">*</span> <span style="color: #40a070">0.3</span>)  <span style="color: #60a0b0; font-style: italic"># Reduce offset to make glasses closer to eyes</span>
+                          top_left_x <span style="color: #666666">=</span> mid_x <span style="color: #666666">-</span> new_w<span style="color: #666666">//</span><span style="color: #40a070">2</span>
+                          top_left_y <span style="color: #666666">=</span> mid_y <span style="color: #666666">-</span> new_h<span style="color: #666666">//</span><span style="color: #40a070">2</span> <span style="color: #666666">-</span> offset_y
+  
+                          overlay_image(image, rotated_glasses, top_left_x, top_left_y, (new_w, new_h))
+                          
+                          <span style="color: #60a0b0; font-style: italic"># hat</span>
+                          
+                          forehead <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">10</span>]  <span style="color: #60a0b0; font-style: italic"># Top of the head keypoint</span>
+                          chin <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">152</span>]  <span style="color: #60a0b0; font-style: italic"># Chin keypoint</span>
+                          left_cheek <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">234</span>]  <span style="color: #60a0b0; font-style: italic"># Left cheek keypoint</span>
+                          right_cheek <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">454</span>]  <span style="color: #60a0b0; font-style: italic"># Right cheek keypoint</span>
+                          <span style="color: #60a0b0; font-style: italic"># Calculate face width and height</span>
+                          face_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">abs</span>(right_cheek<span style="color: #666666">.</span>x <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>x) <span style="color: #666666">*</span> w)
+                          face_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">abs</span>(chin<span style="color: #666666">.</span>y <span style="color: #666666">-</span> forehead<span style="color: #666666">.</span>y) <span style="color: #666666">*</span> h)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate head tilt angle and invert</span>
+                          delta_x <span style="color: #666666">=</span> right_cheek<span style="color: #666666">.</span>x <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>x
+                          delta_y <span style="color: #666666">=</span> right_cheek<span style="color: #666666">.</span>y <span style="color: #666666">-</span> left_cheek<span style="color: #666666">.</span>y
+                          angle <span style="color: #666666">=</span> <span style="color: #666666">-</span>np<span style="color: #666666">.</span>arctan2(delta_y, delta_x) <span style="color: #666666">*</span> (<span style="color: #40a070">180.0</span> <span style="color: #666666">/</span> np<span style="color: #666666">.</span>pi)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Determine hat position and size</span>
+                          scale_factor <span style="color: #666666">=</span> <span style="color: #40a070">1.5</span>  <span style="color: #60a0b0; font-style: italic"># Adjust this factor to change hat size</span>
+                          x_hat <span style="color: #666666">=</span> <span style="color: #007020">int</span>(forehead<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w) <span style="color: #666666">-</span> <span style="color: #007020">int</span>(face_width <span style="color: #666666">*</span> scale_factor) <span style="color: #666666">//</span> <span style="color: #40a070">2</span>
+                          y_hat <span style="color: #666666">=</span> <span style="color: #007020">int</span>(forehead<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h) <span style="color: #666666">-</span> <span style="color: #007020">int</span>(face_height <span style="color: #666666">*</span> scale_factor) <span style="color: #666666">//</span> <span style="color: #40a070">2</span> <span style="color: #666666">+</span> <span style="color: #007020">int</span>(<span style="color: #40a070">0.2</span> <span style="color: #666666">*</span> face_height)  <span style="color: #60a0b0; font-style: italic"># Move hat down</span>
+  
+                          hat_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(face_width <span style="color: #666666">*</span> scale_factor)
+                          hat_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(hat_width <span style="color: #666666">*</span> hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">/</span> hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>])
+  
+                          <span style="color: #007020; font-weight: bold">if</span> y_hat <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> x_hat <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> (y_hat <span style="color: #666666">+</span> hat_height) <span style="color: #666666">&lt;=</span> h <span style="color: #007020; font-weight: bold">and</span> (x_hat <span style="color: #666666">+</span> hat_width) <span style="color: #666666">&lt;=</span> w:
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotation center</span>
+                              center <span style="color: #666666">=</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">//</span> <span style="color: #40a070">2</span>, hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">//</span> <span style="color: #40a070">2</span>)
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotation matrix</span>
+                              rotated_hat <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>getRotationMatrix2D(center, angle, <span style="color: #40a070">1.0</span>)
+                              <span style="color: #60a0b0; font-style: italic"># Calculate rotated bounding box</span>
+                              cos <span style="color: #666666">=</span> np<span style="color: #666666">.</span>abs(rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>])
+                              sin <span style="color: #666666">=</span> np<span style="color: #666666">.</span>abs(rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">1</span>])
+                              new_w <span style="color: #666666">=</span> <span style="color: #007020">int</span>((hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">*</span> sin) <span style="color: #666666">+</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">*</span> cos))
+                              new_h <span style="color: #666666">=</span> <span style="color: #007020">int</span>((hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">*</span> cos) <span style="color: #666666">+</span> (hat_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>] <span style="color: #666666">*</span> sin))
+                              <span style="color: #60a0b0; font-style: italic"># Adjust translation part of rotation matrix</span>
+                              rotated_hat[<span style="color: #40a070">0</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_w <span style="color: #666666">/</span> <span style="color: #40a070">2</span>) <span style="color: #666666">-</span> center[<span style="color: #40a070">0</span>]
+                              rotated_hat[<span style="color: #40a070">1</span>, <span style="color: #40a070">2</span>] <span style="color: #666666">+=</span> (new_h <span style="color: #666666">/</span> <span style="color: #40a070">2</span>) <span style="color: #666666">-</span> center[<span style="color: #40a070">1</span>]
+                              <span style="color: #60a0b0; font-style: italic"># Rotate image</span>
+                              rotated_hat_img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>warpAffine(hat_img, rotated_hat, (new_w, new_h), flags<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>INTER_LINEAR, borderMode<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>BORDER_CONSTANT, borderValue<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>))
+                              overlay_image(image, rotated_hat_img, x_hat, y_hat, (hat_width, hat_height))
+                          <span style="color: #007020; font-weight: bold">else</span>:
+                              <span style="color: #60a0b0; font-style: italic"># print(&quot;Hat position is out of bounds, skipping overlay.&quot;)</span>
+                              <span style="color: #007020; font-weight: bold">pass</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># cigarette</span>
+                          <span style="color: #60a0b0; font-style: italic"># Use mouth keypoints from face mesh</span>
+                          mouth_left <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">61</span>]  <span style="color: #60a0b0; font-style: italic"># Left corner of the mouth</span>
+                          mouth_right <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">291</span>]  <span style="color: #60a0b0; font-style: italic"># Right corner of the mouth</span>
+                          mouth_center <span style="color: #666666">=</span> face_landmarks<span style="color: #666666">.</span>landmark[<span style="color: #40a070">13</span>]  <span style="color: #60a0b0; font-style: italic"># Center of the mouth</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># Calculate mouth width and height with a scaling factor</span>
+                          scale_factor <span style="color: #666666">=</span> <span style="color: #40a070">2.5</span>  <span style="color: #60a0b0; font-style: italic"># Increase this factor to make the image larger</span>
+                          mouth_width <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">abs</span>(mouth_right<span style="color: #666666">.</span>x <span style="color: #666666">-</span> mouth_left<span style="color: #666666">.</span>x) <span style="color: #666666">*</span> w <span style="color: #666666">*</span> scale_factor)
+                          mouth_height <span style="color: #666666">=</span> <span style="color: #007020">int</span>(mouth_width <span style="color: #666666">*</span> cigarette_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">0</span>] <span style="color: #666666">/</span> cigarette_img<span style="color: #666666">.</span>shape[<span style="color: #40a070">1</span>])
+  
+                          <span style="color: #60a0b0; font-style: italic"># Determine cigarette position</span>
+                          x_cigarette <span style="color: #666666">=</span> <span style="color: #007020">int</span>(mouth_center<span style="color: #666666">.</span>x <span style="color: #666666">*</span> w) <span style="color: #666666">-</span> mouth_width
+                          y_cigarette <span style="color: #666666">=</span> <span style="color: #007020">int</span>(mouth_center<span style="color: #666666">.</span>y <span style="color: #666666">*</span> h) <span style="color: #666666">-</span> mouth_height <span style="color: #666666">//</span> <span style="color: #40a070">2</span> <span style="color: #666666">-</span> <span style="color: #40a070">10</span>
+  
+                          <span style="color: #60a0b0; font-style: italic"># Horizontal flip cigarette image to correct orientation</span>
+                          flipped_cigarette <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>flip(cigarette_img, <span style="color: #40a070">1</span>)
+  
+                          <span style="color: #60a0b0; font-style: italic"># Ensure cigarette position is within image bounds</span>
+                          <span style="color: #007020; font-weight: bold">if</span> y_cigarette <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> x_cigarette <span style="color: #666666">&gt;=</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> (y_cigarette <span style="color: #666666">+</span> mouth_height) <span style="color: #666666">&lt;=</span> h <span style="color: #007020; font-weight: bold">and</span> (x_cigarette <span style="color: #666666">+</span> mouth_width) <span style="color: #666666">&lt;=</span> w:
+                              overlay_image(image, flipped_cigarette, x_cigarette, y_cigarette, (mouth_width, mouth_height))
+                          <span style="color: #007020; font-weight: bold">else</span>:
+                              <span style="color: #60a0b0; font-style: italic"># print(&quot;Cigarette position is out of bounds, skipping overlay.&quot;)</span>
+                              <span style="color: #007020; font-weight: bold">pass</span>
+              <span style="color: #007020; font-weight: bold">elif</span> mode4:
+                  <span style="color: #60a0b0; font-style: italic"># Apply sketch effect</span>
+                  cartoon_frame <span style="color: #666666">=</span> sketch_image(image)
+                  image <span style="color: #666666">=</span> cartoon_frame
+              <span style="color: #007020; font-weight: bold">elif</span> mode5:
+                  <span style="color: #60a0b0; font-style: italic"># Apply the cartoon effect using the caart function</span>
+                  cartoon_frame <span style="color: #666666">=</span> caart(image)
+                  <span style="color: #60a0b0; font-style: italic"># Display the cartoonized image</span>
+                  image <span style="color: #666666">=</span> cartoon_frame
+              <span style="color: #007020; font-weight: bold">elif</span> mode6:
+                  <span style="color: #007020; font-weight: bold">if</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                      <span style="color: #007020; font-weight: bold">for</span> face_landmarks <span style="color: #007020; font-weight: bold">in</span> face_results<span style="color: #666666">.</span>multi_face_landmarks:
+                          mp_drawing<span style="color: #666666">.</span>draw_landmarks(
+                              image, face_landmarks, mp_face_mesh<span style="color: #666666">.</span>FACEMESH_TESSELATION,
+                              mp_drawing<span style="color: #666666">.</span>DrawingSpec(color<span style="color: #666666">=</span>(<span style="color: #40a070">80</span>, <span style="color: #40a070">110</span>, <span style="color: #40a070">10</span>), thickness<span style="color: #666666">=</span><span style="color: #40a070">1</span>, circle_radius<span style="color: #666666">=</span><span style="color: #40a070">1</span>),
+                              mp_drawing<span style="color: #666666">.</span>DrawingSpec(color<span style="color: #666666">=</span>(<span style="color: #40a070">80</span>, <span style="color: #40a070">256</span>, <span style="color: #40a070">121</span>), thickness<span style="color: #666666">=</span><span style="color: #40a070">1</span>, circle_radius<span style="color: #666666">=</span><span style="color: #40a070">1</span>))
+                  <span style="color: #007020; font-weight: bold">if</span> hand_results<span style="color: #666666">.</span>multi_hand_landmarks:
+                      <span style="color: #007020; font-weight: bold">for</span> hand_landmarks <span style="color: #007020; font-weight: bold">in</span> hand_results<span style="color: #666666">.</span>multi_hand_landmarks:
+                          mp_drawing<span style="color: #666666">.</span>draw_landmarks(
+                              image, hand_landmarks, mp_hands<span style="color: #666666">.</span>HAND_CONNECTIONS,
+                              mp_drawing<span style="color: #666666">.</span>DrawingSpec(color<span style="color: #666666">=</span>(<span style="color: #40a070">80</span>, <span style="color: #40a070">22</span>, <span style="color: #40a070">10</span>), thickness<span style="color: #666666">=</span><span style="color: #40a070">2</span>, circle_radius<span style="color: #666666">=</span><span style="color: #40a070">4</span>),
+                              mp_drawing<span style="color: #666666">.</span>DrawingSpec(color<span style="color: #666666">=</span>(<span style="color: #40a070">80</span>, <span style="color: #40a070">44</span>, <span style="color: #40a070">121</span>), thickness<span style="color: #666666">=</span><span style="color: #40a070">2</span>, circle_radius<span style="color: #666666">=</span><span style="color: #40a070">2</span>))
+  
+              <span style="color: #60a0b0; font-style: italic"># Convert image to Pygame surface and render</span>
+              <span style="color: #60a0b0; font-style: italic"># image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</span>
+              image <span style="color: #666666">=</span> np<span style="color: #666666">.</span>rot90(image)
+              surface <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>surfarray<span style="color: #666666">.</span>make_surface(image)
+              screen<span style="color: #666666">.</span>blit(surface, (<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>))
+              
+              <span style="color: #60a0b0; font-style: italic"># must behind the surface rendering </span>
+              <span style="color: #007020; font-weight: bold">if</span> mode1:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 1&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+              <span style="color: #007020; font-weight: bold">elif</span> mode2:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 2&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+              <span style="color: #007020; font-weight: bold">elif</span> mode3:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 3&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+              <span style="color: #007020; font-weight: bold">elif</span> mode4:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 4&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+              <span style="color: #007020; font-weight: bold">elif</span> mode5:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 5&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+              <span style="color: #007020; font-weight: bold">elif</span> mode6:
+                  mode_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(<span style="color: #4070a0">&quot;Mode 6&quot;</span>, <span style="color: #007020">True</span>, RED)
+                  mode_rect <span style="color: #666666">=</span> mode_text<span style="color: #666666">.</span>get_rect(bottomleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">240</span>))
+                  screen<span style="color: #666666">.</span>blit(mode_text, mode_rect)
+  
+              <span style="color: #60a0b0; font-style: italic"># Render gesture type to screen</span>
+              <span style="color: #007020; font-weight: bold">if</span> display_hand:
+                  gesture_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(f<span style="color: #4070a0">&quot;{gesture}&quot;</span>, <span style="color: #007020">True</span>, RED)  <span style="color: #60a0b0; font-style: italic"># Red text</span>
+                  gesture_rect <span style="color: #666666">=</span> gesture_text<span style="color: #666666">.</span>get_rect(topleft<span style="color: #666666">=</span>(<span style="color: #40a070">0</span>, <span style="color: #40a070">0</span>))
+                  screen<span style="color: #666666">.</span>blit(gesture_text, gesture_rect) <span style="color: #60a0b0; font-style: italic"># Position at the top left</span>
+  
+              <span style="color: #60a0b0; font-style: italic"># Render FPS to screen</span>
+              fps_text <span style="color: #666666">=</span> font<span style="color: #666666">.</span>render(f<span style="color: #4070a0">&quot;FPS: {fps:.2f}&quot;</span>, <span style="color: #007020">True</span>, RED)  <span style="color: #60a0b0; font-style: italic"># Red text</span>
+              fps_rect <span style="color: #666666">=</span> fps_text<span style="color: #666666">.</span>get_rect(topright<span style="color: #666666">=</span>(<span style="color: #40a070">320</span>, <span style="color: #40a070">0</span>))
+              screen<span style="color: #666666">.</span>blit(fps_text, fps_rect) <span style="color: #60a0b0; font-style: italic"># Position at the top right</span>
+  
+              <span style="color: #60a0b0; font-style: italic"># Handle countdown</span>
+              <span style="color: #007020; font-weight: bold">if</span> countdown_active:
+                  current_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
+                  elapsed_time <span style="color: #666666">=</span> current_time <span style="color: #666666">-</span> countdown_start_time
+                  remaining_time <span style="color: #666666">=</span> countdown_duration <span style="color: #666666">-</span> <span style="color: #007020">int</span>(elapsed_time)
+  
+                  <span style="color: #60a0b0; font-style: italic"># Display countdown</span>
+                  <span style="color: #007020; font-weight: bold">if</span> remaining_time <span style="color: #666666">&gt;</span> <span style="color: #40a070">0</span>:
+                      countdown_text <span style="color: #666666">=</span> font_mid<span style="color: #666666">.</span>render(f<span style="color: #4070a0">&quot;Will change to {new_mode}&quot;</span>, <span style="color: #007020">True</span>, RED)
+                      countdown_rect <span style="color: #666666">=</span> countdown_text<span style="color: #666666">.</span>get_rect(center<span style="color: #666666">=</span>(<span style="color: #40a070">160</span>, <span style="color: #40a070">40</span>))
+                      screen<span style="color: #666666">.</span>blit(countdown_text, countdown_rect)
+  
+                      number_text <span style="color: #666666">=</span> font_big<span style="color: #666666">.</span>render(f<span style="color: #4070a0">&quot;{str(remaining_time)}......&quot;</span>, <span style="color: #007020">True</span>, RED)
+                      number_rect <span style="color: #666666">=</span> number_text<span style="color: #666666">.</span>get_rect(topright<span style="color: #666666">=</span>(<span style="color: #40a070">320</span>, <span style="color: #40a070">60</span>))
+                      screen<span style="color: #666666">.</span>blit(number_text, number_rect)
+                  <span style="color: #007020; font-weight: bold">else</span>:
+                      <span style="color: #60a0b0; font-style: italic"># Apply the new mode after countdown</span>
+                      <span style="color: #007020; font-weight: bold">if</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 1&quot;</span>:
+                          mode1 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode2 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 2&quot;</span>:
+                          mode2 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode1 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 3&quot;</span>:
+                          mode3 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode1 <span style="color: #666666">=</span> mode2 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 4&quot;</span>:
+                          mode4 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode1 <span style="color: #666666">=</span> mode2 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 5&quot;</span>:
+                          mode5 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode1 <span style="color: #666666">=</span> mode2 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode6 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                      <span style="color: #007020; font-weight: bold">elif</span> new_mode <span style="color: #666666">==</span> <span style="color: #4070a0">&quot;Mode 6&quot;</span>:
+                          mode6 <span style="color: #666666">=</span> <span style="color: #007020">True</span>
+                          mode1 <span style="color: #666666">=</span> mode2 <span style="color: #666666">=</span> mode3 <span style="color: #666666">=</span> mode4 <span style="color: #666666">=</span> mode5 <span style="color: #666666">=</span> <span style="color: #007020">False</span>
+                          
+                      <span style="color: #60a0b0; font-style: italic"># reset new_mode and countdown_active</span>
+                      new_mode <span style="color: #666666">=</span> <span style="color: #007020">None</span>
+                      countdown_active <span style="color: #666666">=</span> <span style="color: #007020">False</span>  <span style="color: #60a0b0; font-style: italic"># Reset countdown</span>
+  
+  
+              pygame<span style="color: #666666">.</span>display<span style="color: #666666">.</span>update()
+  
+              <span style="color: #60a0b0; font-style: italic"># Increment frame count</span>
+              fps_frame_count <span style="color: #666666">+=</span> <span style="color: #40a070">1</span>
+  
+              <span style="color: #60a0b0; font-style: italic"># Calculate and print FPS every second</span>
+              elapsed_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time() <span style="color: #666666">-</span> fps_start_time
+              <span style="color: #007020; font-weight: bold">if</span> elapsed_time <span style="color: #666666">&gt;=</span> <span style="color: #40a070">1.0</span>:
+                  fps <span style="color: #666666">=</span> fps_frame_count <span style="color: #666666">/</span> elapsed_time
+                  <span style="color: #60a0b0; font-style: italic"># print(f&quot;FPS: {fps:.2f}&quot;)</span>
+                  fps_frame_count <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+                  fps_start_time <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
+  
+          clock<span style="color: #666666">.</span>tick(<span style="color: #40a070">30</span>)
+  
+  GPIO<span style="color: #666666">.</span>cleanup()
+  pygame<span style="color: #666666">.</span>quit()
+  sys<span style="color: #666666">.</span>exit(<span style="color: #40a070">0</span>)
+  
+  
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">cv2</span>
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">scipy</span>
+  <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">scipy</span> <span style="color: #007020; font-weight: bold">import</span> stats
+  <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">np</span>
+  <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">collections</span> <span style="color: #007020; font-weight: bold">import</span> defaultdict
+  
+  
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">update_c</span>(C,hist):
+      <span style="color: #4070a0; font-style: italic">&quot;&quot;&quot;</span>
+  <span style="color: #4070a0; font-style: italic">    Updates cluster centers using mean values of assigned pixels</span>
+  <span style="color: #4070a0; font-style: italic">    Args:</span>
+  <span style="color: #4070a0; font-style: italic">        C: Current cluster centers</span>
+  <span style="color: #4070a0; font-style: italic">        hist: Image histogram</span>
+  <span style="color: #4070a0; font-style: italic">    Returns:</span>
+  <span style="color: #4070a0; font-style: italic">        Updated cluster centers and groupings</span>
+  <span style="color: #4070a0; font-style: italic">    &quot;&quot;&quot;</span>
+      max_iterations <span style="color: #666666">=</span> <span style="color: #40a070">1</span>
+      <span style="color: #007020; font-weight: bold">for</span> _ <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(max_iterations):
+          groups<span style="color: #666666">=</span>defaultdict(<span style="color: #007020">list</span>)
+          non_zero_indices <span style="color: #666666">=</span> np<span style="color: #666666">.</span>nonzero(hist)[<span style="color: #40a070">0</span>]
+  
+          d <span style="color: #666666">=</span> np<span style="color: #666666">.</span>abs(C[:, np<span style="color: #666666">.</span>newaxis] <span style="color: #666666">-</span> non_zero_indices)
+          index <span style="color: #666666">=</span> np<span style="color: #666666">.</span>argmin(d, axis<span style="color: #666666">=</span><span style="color: #40a070">0</span>)
+          <span style="color: #007020; font-weight: bold">for</span> i, indice <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(non_zero_indices):
+              groups[index[i]]<span style="color: #666666">.</span>append(indice)
+  
+          new_C<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(C)
+          <span style="color: #007020; font-weight: bold">for</span> i,indice <span style="color: #007020; font-weight: bold">in</span> groups<span style="color: #666666">.</span>items():
+              <span style="color: #007020; font-weight: bold">if</span>(np<span style="color: #666666">.</span>sum(hist[indice])<span style="color: #666666">==</span><span style="color: #40a070">0</span>):
+                  <span style="color: #007020; font-weight: bold">continue</span>
+              new_C[i]<span style="color: #666666">=</span><span style="color: #007020">int</span>(np<span style="color: #666666">.</span>sum(indice<span style="color: #666666">*</span>hist[indice])<span style="color: #666666">/</span>np<span style="color: #666666">.</span>sum(hist[indice]))
+  
+          <span style="color: #007020; font-weight: bold">if</span>(np<span style="color: #666666">.</span>sum(new_C<span style="color: #666666">-</span>C)<span style="color: #666666">==</span><span style="color: #40a070">0</span>):
+              <span style="color: #007020; font-weight: bold">break</span>
+          C<span style="color: #666666">=</span>new_C
+  
+      <span style="color: #007020; font-weight: bold">return</span> C,groups
+  
+  <span style="color: #60a0b0; font-style: italic"># Calculates K Means clustering</span>
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">K_histogram</span>(hist):
+      <span style="color: #4070a0; font-style: italic">&quot;&quot;&quot;</span>
+  <span style="color: #4070a0; font-style: italic">    Performs adaptive K-means clustering on image histogram</span>
+  <span style="color: #4070a0; font-style: italic">    - Starts with single cluster center at 128</span>
+  <span style="color: #4070a0; font-style: italic">    - Splits clusters that fail normality test and meet minimum size</span>
+  <span style="color: #4070a0; font-style: italic">    Args:</span>
+  <span style="color: #4070a0; font-style: italic">        hist: Image histogram</span>
+  <span style="color: #4070a0; font-style: italic">    Returns:</span>
+  <span style="color: #4070a0; font-style: italic">        Final cluster centers</span>
+  <span style="color: #4070a0; font-style: italic">    &quot;&quot;&quot;</span>
+      alpha<span style="color: #666666">=</span><span style="color: #40a070">0.001</span>
+      N<span style="color: #666666">=</span><span style="color: #40a070">80</span>
+      C<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array([<span style="color: #40a070">128</span>])
+  
+      <span style="color: #007020; font-weight: bold">while</span> <span style="color: #007020">True</span>:
+          C,groups<span style="color: #666666">=</span>update_c(C,hist)
+  
+          new_C<span style="color: #666666">=</span><span style="color: #007020">set</span>()
+          <span style="color: #007020; font-weight: bold">for</span> i,indice <span style="color: #007020; font-weight: bold">in</span> groups<span style="color: #666666">.</span>items():
+              <span style="color: #007020; font-weight: bold">if</span>(<span style="color: #007020">len</span>(indice)<span style="color: #666666">&lt;</span>N):
+                  new_C<span style="color: #666666">.</span>add(C[i])
+                  <span style="color: #007020; font-weight: bold">continue</span>
+  
+              z, pval<span style="color: #666666">=</span>stats<span style="color: #666666">.</span>normaltest(hist[indice])
+              <span style="color: #007020; font-weight: bold">if</span>(pval<span style="color: #666666">&lt;</span>alpha):
+                  left<span style="color: #666666">=</span><span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">if</span> i<span style="color: #666666">==</span><span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">else</span> C[i<span style="color: #666666">-</span><span style="color: #40a070">1</span>]
+                  right<span style="color: #666666">=</span><span style="color: #007020">len</span>(hist)<span style="color: #666666">-</span><span style="color: #40a070">1</span> <span style="color: #007020; font-weight: bold">if</span> i <span style="color: #666666">==</span><span style="color: #007020">len</span>(C)<span style="color: #666666">-</span><span style="color: #40a070">1</span> <span style="color: #007020; font-weight: bold">else</span> C[i<span style="color: #666666">+</span><span style="color: #40a070">1</span>]
+                  delta<span style="color: #666666">=</span>right<span style="color: #666666">-</span>left
+                  <span style="color: #007020; font-weight: bold">if</span>(delta <span style="color: #666666">&gt;=</span><span style="color: #40a070">3</span>):
+                      c1<span style="color: #666666">=</span>(C[i]<span style="color: #666666">+</span>left)<span style="color: #666666">/</span><span style="color: #40a070">2</span>
+                      c2<span style="color: #666666">=</span>(C[i]<span style="color: #666666">+</span>right)<span style="color: #666666">/</span><span style="color: #40a070">2</span>
+                      new_C<span style="color: #666666">.</span>add(c1)
+                      new_C<span style="color: #666666">.</span>add(c2)
+                  <span style="color: #007020; font-weight: bold">else</span>:
+                      new_C<span style="color: #666666">.</span>add(C[i])
+              <span style="color: #007020; font-weight: bold">else</span>:
+                  new_C<span style="color: #666666">.</span>add(C[i])
+          <span style="color: #007020; font-weight: bold">if</span>(<span style="color: #007020">len</span>(new_C)<span style="color: #666666">==</span><span style="color: #007020">len</span>(C)):
+              <span style="color: #007020; font-weight: bold">break</span>
+          <span style="color: #007020; font-weight: bold">else</span>:
+              C<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(<span style="color: #007020">sorted</span>(new_C))
+      <span style="color: #007020; font-weight: bold">return</span> C
+  
+  <span style="color: #60a0b0; font-style: italic"># The main controlling function</span>
+  <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">caart</span>(img):
+      <span style="color: #4070a0; font-style: italic">&quot;&quot;&quot;</span>
+  <span style="color: #4070a0; font-style: italic">    Main cartoonization function that:</span>
+  <span style="color: #4070a0; font-style: italic">    1. Applies bilateral filtering to reduce noise while preserving edges</span>
+  <span style="color: #4070a0; font-style: italic">    2. Detects edges using Canny</span>
+  <span style="color: #4070a0; font-style: italic">    3. Converts to HSV color space</span>
+  <span style="color: #4070a0; font-style: italic">    4. Performs color quantization using adaptive clustering</span>
+  <span style="color: #4070a0; font-style: italic">    5. Draws detected edges and applies final processing</span>
+  <span style="color: #4070a0; font-style: italic">    Args:</span>
+  <span style="color: #4070a0; font-style: italic">        img: Input RGB image</span>
+  <span style="color: #4070a0; font-style: italic">    Returns:</span>
+  <span style="color: #4070a0; font-style: italic">        Cartoonized version of input image</span>
+  <span style="color: #4070a0; font-style: italic">    &quot;&quot;&quot;</span>
+      <span style="color: #60a0b0; font-style: italic"># Apply bilateral filter to reduce noise while preserving edges</span>
+      kernel<span style="color: #666666">=</span>np<span style="color: #666666">.</span>ones((<span style="color: #40a070">2</span>,<span style="color: #40a070">2</span>), np<span style="color: #666666">.</span>uint8)
+      output<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(img)
+      x,y,c<span style="color: #666666">=</span>output<span style="color: #666666">.</span>shape
+      <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(c):
+          output[:,:,i]<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>bilateralFilter(output[:,:,i],<span style="color: #40a070">5</span>,<span style="color: #40a070">150</span>,<span style="color: #40a070">150</span>)
+          
+      <span style="color: #60a0b0; font-style: italic"># Detect edges and convert to HSV for better color processing    </span>
+      edge<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>Canny(output, <span style="color: #40a070">100</span>, <span style="color: #40a070">200</span>)
+      output<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>cvtColor(output,cv2<span style="color: #666666">.</span>COLOR_RGB2HSV)
+  
+      <span style="color: #60a0b0; font-style: italic"># Calculate histograms for each HSV channel</span>
+      hists <span style="color: #666666">=</span> []
+  
+      hist,_<span style="color: #666666">=</span>np<span style="color: #666666">.</span>histogram(output[:,:,<span style="color: #40a070">0</span>],bins <span style="color: #666666">=</span>np<span style="color: #666666">.</span>arange(<span style="color: #40a070">180</span><span style="color: #666666">+</span><span style="color: #40a070">1</span>))
+      hists<span style="color: #666666">.</span>append(hist)
+      hist,_<span style="color: #666666">=</span>np<span style="color: #666666">.</span>histogram(output[:,:,<span style="color: #40a070">1</span>],bins <span style="color: #666666">=</span>np<span style="color: #666666">.</span>arange(<span style="color: #40a070">256</span><span style="color: #666666">+</span><span style="color: #40a070">1</span>))
+      hists<span style="color: #666666">.</span>append(hist)
+      hist,_<span style="color: #666666">=</span>np<span style="color: #666666">.</span>histogram(output[:,:,<span style="color: #40a070">2</span>],bins <span style="color: #666666">=</span>np<span style="color: #666666">.</span>arange(<span style="color: #40a070">256</span><span style="color: #666666">+</span><span style="color: #40a070">1</span>))
+      hists<span style="color: #666666">.</span>append(hist)
+  
+  
+      C<span style="color: #666666">=</span>[]
+      <span style="color: #007020; font-weight: bold">for</span> h <span style="color: #007020; font-weight: bold">in</span> hists:
+          C<span style="color: #666666">.</span>append(K_histogram(h))
+      <span style="color: #60a0b0; font-style: italic">#print(&quot;centroids: {0}&quot;.format(C))</span>
+  
+      output<span style="color: #666666">=</span>output<span style="color: #666666">.</span>reshape((<span style="color: #666666">-</span><span style="color: #40a070">1</span>,c))
+      <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(c):
+          channel<span style="color: #666666">=</span>output[:,i]
+          index<span style="color: #666666">=</span>np<span style="color: #666666">.</span>argmin(np<span style="color: #666666">.</span>abs(channel[:, np<span style="color: #666666">.</span>newaxis] <span style="color: #666666">-</span> C[i]), axis<span style="color: #666666">=</span><span style="color: #40a070">1</span>)
+          output[:,i]<span style="color: #666666">=</span>C[i][index]
+      output<span style="color: #666666">=</span>output<span style="color: #666666">.</span>reshape((x,y,c))
+      output<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>cvtColor(output, cv2<span style="color: #666666">.</span>COLOR_HSV2RGB)
+  
+      contours,_<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>findContours(edge,cv2<span style="color: #666666">.</span>RETR_EXTERNAL, cv2<span style="color: #666666">.</span>CHAIN_APPROX_NONE)
+      cv2<span style="color: #666666">.</span>drawContours(output,contours,<span style="color: #666666">-</span><span style="color: #40a070">1</span>,<span style="color: #40a070">0</span>,thickness<span style="color: #666666">=</span><span style="color: #40a070">1</span>)
+      <span style="color: #60a0b0; font-style: italic">#cartoon = cv2.bitwise_and(output, output, mask=contours)</span>
+      <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">3</span>):
+          output[:,:,i]<span style="color: #666666">=</span>cv2<span style="color: #666666">.</span>erode(output[:,:,i], kernel, iterations<span style="color: #666666">=</span><span style="color: #40a070">1</span>)
+      <span style="color: #60a0b0; font-style: italic">#Laplacian = cv2.Laplacian(output,cv2.CV_8U, ksize=11)</span>
+      <span style="color: #60a0b0; font-style: italic">#output=output-Laplacian</span>
+      <span style="color: #007020; font-weight: bold">return</span> output
+  
+  <span style="color: #60a0b0; font-style: italic">#output=caart(cv2.imread(&quot;original.jpg&quot;))</span>
+  <span style="color: #60a0b0; font-style: italic">#cv2.imwrite(&quot;cartoon.jpg&quot;, output)</span>
+  </pre></td></tr></table></div>
+  
