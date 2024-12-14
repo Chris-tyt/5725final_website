@@ -908,7 +908,17 @@
 					}
 				}
 
-				typeWriter();
+				// Intersection Observer to detect when the element is in view
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							index = 0; // Reset index to start typing effect again
+							typeWriter();
+						}
+					});
+				});
+
+				observer.observe(textElement);
 			});
 			</script>
 
